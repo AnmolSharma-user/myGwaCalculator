@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# 🎓 GWA Calculator – The Simple Way to Track Your Grades
 
-## Project info
+Hey there!
 
-**URL**: https://lovable.dev/projects/2414b1dd-29f5-459a-aac0-eceda0913398
+If you're a student in the Philippines and need a fast way to calculate your **General Weighted Average (GWA)** — you're in the right place.
 
-## How can I edit this code?
+I built this tool to make life a little easier during finals, scholarship applications, or just to track how you're doing. No spreadsheets. No headaches. Just type in your grades and units… and boom, you've got your GWA.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 What This App Does
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2414b1dd-29f5-459a-aac0-eceda0913398) and start prompting.
+This tool helps you:
 
-Changes made via Lovable will be committed automatically to this repo.
+* Add multiple subjects easily  
+* Enter your **grade** (0–100) and **units** for each one  
+* Get your GWA instantly using this formula:  
+  `GWA = (Sum of Grade × Units) ÷ (Sum of Units)`
 
-**Use your preferred IDE**
+The best part? It does all this in real time — no reloads, no guesswork.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🎯 Why It’s Helpful
 
-Follow these steps:
+I remember being buried under exam stress and trying to figure out if I’d made it to the Dean’s List.  
+The math wasn't hard… just annoying.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+This app fixes that. It’s:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* Super easy to use  
+* Fast  
+* Mobile-friendly  
+* Actually made *for* Filipino students — with the grading scale we use here  
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🛠 Tech Stack
+
+Here’s what’s under the hood:
+
+* **Frontend**: React 18 + TypeScript  
+* **Styling**: Tailwind CSS  
+* **UI Components**: shadcn/ui  
+* **Icons**: Lucide React  
+* **Routing**: React Router  
+* **State Management**: React Query  
+* **Build Tool**: Vite  
+
+Yeah — it’s built to load fast and feel smooth.
+
+---
+
+## ✨ Features You’ll Love
+
+* **Dark/Light Theme** — switch based on your mood  
+* **Clipboard Copy** — get your result in one click  
+* **Print Mode** — export a clean GWA report  
+* **Social Sharing** — share your result with friends  
+* **Accessibility** — keyboard + screen reader friendly  
+* **Responsive Design** — works great on mobile too
+
+---
+
+## 🧠 Bonus Tools Included
+
+This app doesn’t stop at GWA. It also comes with:
+
+* GWA to GPA Converter  
+* Grade Average Calculator  
+* Weighted Grade Calculator  
+* Final Grade Calculator  
+* Semester GPA Calculator  
+* CGPA to Percentage Converter  
+
+So whatever your grading system looks like, we’ve got you.
+
+---
+
+## 📄 How to Run Locally
+
+Want to try it out on your machine?
+
+```bash
+git clone https://github.com/yourusername/gwa-calculator.git
+cd gwa-calculator
+npm install
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2414b1dd-29f5-459a-aac0-eceda0913398) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
