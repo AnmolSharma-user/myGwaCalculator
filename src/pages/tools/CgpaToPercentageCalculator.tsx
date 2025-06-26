@@ -9,7 +9,7 @@ import { Calculator, Percent } from "lucide-react";
 import { ReadingProgressBar } from "@/components/ReadingProgressBar";
 import { BackToTopButton } from "@/components/BackToTopButton";
 import { ResultsActions } from "@/components/ResultsActions";
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 
 const CgpaToPercentageCalculator = () => {
   const [cgpa, setCgpa] = useState("");
@@ -79,7 +79,7 @@ const CgpaToPercentageCalculator = () => {
     return { category: "Below Average", color: "text-red-600 dark:text-red-400" };
   };
 
-  const faqs = [
+  const faqData = [
     {
       question: "What is CGPA?",
       answer: "CGPA stands for Cumulative Grade Point Average. It's the average of all grade points obtained in all semesters, representing overall academic performance throughout your course."
@@ -95,21 +95,43 @@ const CgpaToPercentageCalculator = () => {
     {
       question: "What if my CGPA doesn't fit these scales?",
       answer: "If your institution uses a different scale, consult with your academic office for the official conversion formula, as methods can vary between schools."
+    },
+    {
+      question: "Is this CGPA to percentage calculator free to use?",
+      answer: "Yes, our CGPA to percentage calculator is completely free to use. No registration or payment required."
+    },
+    {
+      question: "Which scale should I use?",
+      answer: "Use the scale that matches your institution's grading system. 10-point scale is common in India, 4-point scale in the US, and 5-point scale in some other countries."
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>CGPA to Percentage Calculator – Convert CGPA to Percentage Online</title>
-        <meta name="description" content="Convert your CGPA (on 10, 4, or 5 point scale) to percentage instantly. Free online CGPA to percentage conversion tool for students and job applications." />
-        <meta name="keywords" content="CGPA to percentage, CGPA to percentage calculator, convert CGPA, academic tools, student grades, free online calculator" />
-        <link rel="canonical" href="https://mygwacalculator.com/tools/cgpa-to-percentage-calculator" />
-        <meta property="og:title" content="CGPA to Percentage Calculator – Convert CGPA to Percentage Online" />
-        <meta property="og:description" content="Convert your CGPA (on 10, 4, or 5 point scale) to percentage instantly. Free online CGPA to percentage conversion tool for students and job applications." />
-        <meta property="og:url" content="https://mygwacalculator.com/tools/cgpa-to-percentage-calculator" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHead
+        title="CGPA to Percentage Calculator – Convert CGPA to Percentage Online"
+        description="Convert your CGPA (on 10, 4, or 5 point scale) to percentage instantly. Free online CGPA to percentage conversion tool for students and job applications."
+        keywords="CGPA to percentage, CGPA to percentage calculator, convert CGPA, academic tools, student grades, free online calculator, cumulative grade point average"
+        canonicalUrl="https://mygwacalculator.com/tools/cgpa-to-percentage-calculator"
+        faqData={faqData}
+        toolType="Grade Converter"
+        toolCategory="Educational"
+        toolFeatures={[
+          "Multiple scale support",
+          "CGPA to percentage conversion",
+          "Grade category display",
+          "Instant results",
+          "Mobile-friendly",
+          "Job application ready"
+        ]}
+        toolBenefits={[
+          "Academic conversion support",
+          "Job application assistance",
+          "Free to use",
+          "No registration required",
+          "Educational guidance"
+        ]}
+      />
       <ReadingProgressBar />
       <div className="min-h-screen bg-gradient-to-br from-academic-blue-light via-white to-academic-gray dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-32 pb-8 sm:pb-12 px-3 sm:px-4">
         <div className="max-w-4xl mx-auto">
@@ -511,7 +533,7 @@ const CgpaToPercentageCalculator = () => {
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
+                {faqData.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                     <AccordionContent className="text-gray-600 dark:text-gray-400">

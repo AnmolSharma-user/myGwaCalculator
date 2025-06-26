@@ -9,7 +9,7 @@ import { Plus, Trash2, Calculator, BookOpen } from "lucide-react";
 import { ReadingProgressBar } from "@/components/ReadingProgressBar";
 import { BackToTopButton } from "@/components/BackToTopButton";
 import { ResultsActions } from "@/components/ResultsActions";
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 
 interface Course {
   id: string;
@@ -119,7 +119,7 @@ const SemesterGpaCalculator = () => {
     }
   };
 
-  const faqs = [
+  const faqData = [
     {
       question: "How is semester GPA calculated?",
       answer: "Semester GPA is calculated by multiplying each course's grade points by its credit hours, summing these values, and dividing by the total credit hours for that semester."
@@ -135,21 +135,43 @@ const SemesterGpaCalculator = () => {
     {
       question: "What if my school uses a different grading scale?",
       answer: "This calculator uses the standard 4.0 scale. If your school uses a different scale, you may need to convert grades or use a different calculator specific to your system."
+    },
+    {
+      question: "Is this semester GPA calculator free to use?",
+      answer: "Yes, our semester GPA calculator is completely free to use. No registration or payment required."
+    },
+    {
+      question: "Can I add or remove courses?",
+      answer: "Yes, you can add unlimited courses using the '+' button and remove courses using the trash icon. You need at least one course to calculate the GPA."
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>Semester GPA Calculator – Calculate Your GPA for the Semester</title>
-        <meta name="description" content="Calculate your semester GPA quickly and accurately. Enter your courses, grades, and credits to get your GPA and track your academic progress." />
-        <meta name="keywords" content="semester GPA calculator, GPA calculator, course grades, academic progress, student GPA, free online calculator" />
-        <link rel="canonical" href="https://mygwacalculator.com/tools/semester-gpa-calculator" />
-        <meta property="og:title" content="Semester GPA Calculator – Calculate Your GPA for the Semester" />
-        <meta property="og:description" content="Calculate your semester GPA quickly and accurately. Enter your courses, grades, and credits to get your GPA and track your academic progress." />
-        <meta property="og:url" content="https://mygwacalculator.com/tools/semester-gpa-calculator" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHead
+        title="Semester GPA Calculator – Calculate Your GPA for the Semester"
+        description="Calculate your semester GPA quickly and accurately. Enter your courses, grades, and credits to get your GPA and track your academic progress."
+        keywords="semester GPA calculator, GPA calculator, course grades, academic progress, student GPA, free online calculator, semester grade point average"
+        canonicalUrl="https://mygwacalculator.com/tools/semester-gpa-calculator"
+        faqData={faqData}
+        toolType="GPA Calculator"
+        toolCategory="Educational"
+        toolFeatures={[
+          "Course management",
+          "Grade point calculation",
+          "Credit hour tracking",
+          "Course naming",
+          "Instant results",
+          "Mobile-friendly"
+        ]}
+        toolBenefits={[
+          "Academic progress tracking",
+          "GPA monitoring",
+          "Free to use",
+          "No registration required",
+          "Educational insights"
+        ]}
+      />
       <ReadingProgressBar />
       <div className="min-h-screen bg-gradient-to-br from-academic-blue-light via-white to-academic-gray dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-32 pb-8 sm:pb-12 px-3 sm:px-4">
         <div className="max-w-4xl mx-auto">
@@ -635,7 +657,7 @@ const SemesterGpaCalculator = () => {
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
+                {faqData.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                     <AccordionContent className="text-gray-600 dark:text-gray-400">

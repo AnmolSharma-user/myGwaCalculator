@@ -8,7 +8,7 @@ import { Calculator, Target, BookOpen, CheckCircle, AlertCircle } from "lucide-r
 import { ReadingProgressBar } from "@/components/ReadingProgressBar";
 import { BackToTopButton } from "@/components/BackToTopButton";
 import { ResultsActions } from "@/components/ResultsActions";
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 
 const FinalGradeCalculator = () => {
   const [currentGrade, setCurrentGrade] = useState("");
@@ -68,7 +68,7 @@ const FinalGradeCalculator = () => {
     return "May not be achievable - consider other options";
   };
 
-  const faqs = [
+  const faqData = [
     {
       question: "How does the final grade calculator work?",
       answer: "It uses the formula: Required Score = (Desired Grade - Current Grade × (1 - Final Weight)) ÷ Final Weight. This determines what you need on your final exam to achieve your target grade."
@@ -84,21 +84,43 @@ const FinalGradeCalculator = () => {
     {
       question: "What does 'current grade' mean?",
       answer: "Your current grade is your average score from all completed assignments, quizzes, and exams before the final. This should represent your standing before the final exam."
+    },
+    {
+      question: "Is this final grade calculator free to use?",
+      answer: "Yes, our final grade calculator is completely free to use. No registration or payment required."
+    },
+    {
+      question: "How accurate are the calculations?",
+      answer: "The calculations are mathematically accurate based on the standard final grade formula. However, always verify with your instructor as grading policies may vary."
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>Final Grade Calculator – Find Out What You Need on Your Final Exam</title>
-        <meta name="description" content="Discover the score you need on your final exam to achieve your target grade. Use this free final grade calculator to plan your study strategy and reach your academic goals." />
-        <meta name="keywords" content="final grade calculator, required final exam score, grade goal, academic planning, student tools, free online calculator" />
-        <link rel="canonical" href="https://mygwacalculator.com/tools/final-grade-calculator" />
-        <meta property="og:title" content="Final Grade Calculator – Find Out What You Need on Your Final Exam" />
-        <meta property="og:description" content="Discover the score you need on your final exam to achieve your target grade. Use this free final grade calculator to plan your study strategy and reach your academic goals." />
-        <meta property="og:url" content="https://mygwacalculator.com/tools/final-grade-calculator" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHead
+        title="Final Grade Calculator – Find Out What You Need on Your Final Exam"
+        description="Discover the score you need on your final exam to achieve your target grade. Use this free final grade calculator to plan your study strategy and reach your academic goals."
+        keywords="final grade calculator, required final exam score, grade goal, academic planning, student tools, free online calculator, final exam calculator"
+        canonicalUrl="https://mygwacalculator.com/tools/final-grade-calculator"
+        faqData={faqData}
+        toolType="Final Grade Calculator"
+        toolCategory="Educational"
+        toolFeatures={[
+          "Final exam score calculation",
+          "Grade goal planning",
+          "Study strategy tool",
+          "Academic planning",
+          "Instant results",
+          "Mobile-friendly"
+        ]}
+        toolBenefits={[
+          "Academic goal setting",
+          "Study planning",
+          "Free to use",
+          "No registration required",
+          "Educational guidance"
+        ]}
+      />
       <ReadingProgressBar />
       <div className="min-h-screen bg-gradient-to-br from-academic-blue-light via-white to-academic-gray dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-32 pb-8 sm:pb-12 px-3 sm:px-4">
         <div className="max-w-4xl mx-auto">
@@ -439,7 +461,7 @@ const FinalGradeCalculator = () => {
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
+                {faqData.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                     <AccordionContent className="text-gray-600 dark:text-gray-400">

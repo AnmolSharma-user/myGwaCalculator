@@ -10,7 +10,7 @@ import { Calculator, ArrowRight } from "lucide-react";
 import { ReadingProgressBar } from "@/components/ReadingProgressBar";
 import { BackToTopButton } from "@/components/BackToTopButton";
 import { ResultsActions } from "@/components/ResultsActions";
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 
 const GwaToGpaConverter = () => {
   const [gwa, setGwa] = useState("");
@@ -96,7 +96,7 @@ const GwaToGpaConverter = () => {
     setResult(Math.round(convertedValue * 100) / 100);
   };
 
-  const faqs = [
+  const faqData = [
     {
       question: "What's the difference between GWA and GPA?",
       answer: "GWA (General Weighted Average) is commonly used in the Philippines with a 1.0-5.0 scale, while GPA (Grade Point Average) typically uses a 4.0 scale in the US. Both measure academic performance but use different scales."
@@ -112,21 +112,43 @@ const GwaToGpaConverter = () => {
     {
       question: "What if my school uses a different scale?",
       answer: "If your institution uses a scale not listed here, consult your academic office for official conversion guidelines, as conversion methods can vary significantly between schools."
+    },
+    {
+      question: "Is this GWA to GPA converter free to use?",
+      answer: "Yes, our GWA to GPA converter is completely free to use. No registration or payment required."
+    },
+    {
+      question: "Can I convert multiple grades at once?",
+      answer: "Currently, this tool converts one grade at a time. For multiple conversions, you can use the tool repeatedly or contact us for bulk conversion features."
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>GWA to GPA Converter – Convert Philippine GWA to US GPA Instantly</title>
-        <meta name="description" content="Instantly convert your Philippine General Weighted Average (GWA) to US GPA (4.0 scale) or vice versa. Free, accurate, and easy-to-use online grade conversion tool for students and professionals." />
-        <meta name="keywords" content="GWA to GPA, GWA to GPA converter, Philippine GWA, US GPA, grade conversion, academic tools, student GPA, free online calculator" />
-        <link rel="canonical" href="https://mygwacalculator.com/tools/gwa-to-gpa-converter" />
-        <meta property="og:title" content="GWA to GPA Converter – Convert Philippine GWA to US GPA Instantly" />
-        <meta property="og:description" content="Instantly convert your Philippine General Weighted Average (GWA) to US GPA (4.0 scale) or vice versa. Free, accurate, and easy-to-use online grade conversion tool for students and professionals." />
-        <meta property="og:url" content="https://mygwacalculator.com/tools/gwa-to-gpa-converter" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHead
+        title="GWA to GPA Converter – Convert Philippine GWA to US GPA Instantly"
+        description="Instantly convert your Philippine General Weighted Average (GWA) to US GPA (4.0 scale) or vice versa. Free, accurate, and easy-to-use online grade conversion tool for students and professionals."
+        keywords="GWA to GPA, GWA to GPA converter, Philippine GWA, US GPA, grade conversion, academic tools, student GPA, free online calculator, grade scale converter, international grade conversion"
+        canonicalUrl="https://mygwacalculator.com/tools/gwa-to-gpa-converter"
+        faqData={faqData}
+        toolType="Grade Converter"
+        toolCategory="Educational"
+        toolFeatures={[
+          "Philippine GWA to US GPA conversion",
+          "US GPA to Philippine GWA conversion", 
+          "Percentage to GPA conversion",
+          "Multiple scale support",
+          "Instant results",
+          "Mobile-friendly"
+        ]}
+        toolBenefits={[
+          "Accurate grade conversions",
+          "International application support",
+          "Free to use",
+          "No registration required",
+          "Educational guidance"
+        ]}
+      />
       <ReadingProgressBar />
       <div className="min-h-screen bg-gradient-to-br from-academic-blue-light via-white to-academic-gray dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-32 pb-8 sm:pb-12 px-3 sm:px-4">
         <div className="max-w-4xl mx-auto">
@@ -414,7 +436,7 @@ const GwaToGpaConverter = () => {
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
+                {faqData.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                     <AccordionContent className="text-gray-600 dark:text-gray-400">

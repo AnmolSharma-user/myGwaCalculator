@@ -8,7 +8,7 @@ import { Plus, Trash2, Calculator } from "lucide-react";
 import { ReadingProgressBar } from "@/components/ReadingProgressBar";
 import { BackToTopButton } from "@/components/BackToTopButton";
 import { ResultsActions } from "@/components/ResultsActions";
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 
 interface Grade {
   id: string;
@@ -90,7 +90,7 @@ const GradeAverageCalculator = () => {
     setAverage(Math.round(avg * 100) / 100);
   };
 
-  const faqs = [
+  const faqData = [
     {
       question: "How is the grade average calculated?",
       answer: "The grade average is calculated by adding all your grades together and dividing by the number of grades. This gives you the arithmetic mean of your grades."
@@ -106,37 +106,43 @@ const GradeAverageCalculator = () => {
     {
       question: "What if I have incomplete grades?",
       answer: "Only include completed grades with numerical values. Incomplete or pending grades should not be included in your average calculation."
+    },
+    {
+      question: "Is this grade average calculator free to use?",
+      answer: "Yes, our grade average calculator is completely free to use. No registration or payment required."
+    },
+    {
+      question: "Can I add or remove subjects?",
+      answer: "Yes, you can add unlimited subjects using the '+' button and remove subjects using the trash icon. You need at least one subject to calculate the average."
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>Grade Average Calculator – Calculate Your Subject Grades Online</title>
-        <meta name="description" content="Calculate the average of your grades across multiple subjects with this free online grade average calculator. Perfect for students to track academic performance and improve results." />
-        <meta name="keywords" content="grade average calculator, calculate grade average, subject average, academic performance, student grades, average calculator, grade tracker, free online calculator" />
-        <link rel="canonical" href="https://mygwacalculator.com/tools/grade-average-calculator" />
-        <meta property="og:title" content="Grade Average Calculator – Calculate Your Subject Grades Online" />
-        <meta property="og:description" content="Calculate the average of your grades across multiple subjects with this free online grade average calculator. Perfect for students to track academic performance and improve results." />
-        <meta property="og:url" content="https://mygwacalculator.com/tools/grade-average-calculator" />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Grade Average Calculator",
-            "description": "Free online tool to calculate the average of grades across multiple subjects",
-            "url": "https://mygwacalculator.com/tools/grade-average-calculator",
-            "applicationCategory": "EducationalApplication",
-            "operatingSystem": "Web Browser",
-            "isAccessibleForFree": true,
-            "creator": {
-              "@type": "Organization",
-              "name": "GWA Calculator"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Grade Average Calculator – Calculate Your Subject Grades Online"
+        description="Calculate the average of your grades across multiple subjects with this free online grade average calculator. Perfect for students to track academic performance and improve results."
+        keywords="grade average calculator, calculate grade average, subject average, academic performance, student grades, average calculator, grade tracker, free online calculator, simple average calculator"
+        canonicalUrl="https://mygwacalculator.com/tools/grade-average-calculator"
+        faqData={faqData}
+        toolType="Average Calculator"
+        toolCategory="Educational"
+        toolFeatures={[
+          "Multiple subject support",
+          "Dynamic grade input",
+          "Simple average calculation",
+          "Subject naming",
+          "Instant results",
+          "Mobile-friendly"
+        ]}
+        toolBenefits={[
+          "Track academic performance",
+          "Easy grade management",
+          "Free to use",
+          "No registration required",
+          "Educational insights"
+        ]}
+      />
       
       <ReadingProgressBar />
       <div className="min-h-screen bg-gradient-to-br from-academic-blue-light via-white to-academic-gray dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-32 pb-8 sm:pb-12 px-3 sm:px-4">
@@ -443,7 +449,7 @@ const GradeAverageCalculator = () => {
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
+                {faqData.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                     <AccordionContent className="text-gray-600 dark:text-gray-400">

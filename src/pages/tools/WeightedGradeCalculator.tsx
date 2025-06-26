@@ -8,7 +8,7 @@ import { Plus, Trash2, Calculator } from "lucide-react";
 import { ReadingProgressBar } from "@/components/ReadingProgressBar";
 import { BackToTopButton } from "@/components/BackToTopButton";
 import { ResultsActions } from "@/components/ResultsActions";
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 
 interface WeightedGrade {
   id: string;
@@ -112,7 +112,7 @@ const WeightedGradeCalculator = () => {
     }
   };
 
-  const faqs = [
+  const faqData = [
     {
       question: "What is a weighted grade?",
       answer: "A weighted grade gives different assignments varying levels of importance. For example, a final exam might be worth 40% while homework assignments are worth 20% of your total grade."
@@ -128,21 +128,43 @@ const WeightedGradeCalculator = () => {
     {
       question: "Can I use this for different grading scales?",
       answer: "Yes! This calculator works with any numerical grading scale - whether it's 0-100, 0-4.0, or any other system your school uses."
+    },
+    {
+      question: "Is this weighted grade calculator free to use?",
+      answer: "Yes, our weighted grade calculator is completely free to use. No registration or payment required."
+    },
+    {
+      question: "Can I add or remove assignments?",
+      answer: "Yes, you can add unlimited assignments using the '+' button and remove assignments using the trash icon. You need at least one assignment to calculate the weighted average."
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>Weighted Grade Calculator – Compute Weighted Averages for Assignments</title>
-        <meta name="description" content="Easily calculate your weighted grade average by entering grades and their weights. Ideal for students managing assignments, quizzes, and exams with different importance." />
-        <meta name="keywords" content="weighted grade calculator, weighted average, assignment grades, grade calculator, academic tools, student grades, free online calculator" />
-        <link rel="canonical" href="https://mygwacalculator.com/tools/weighted-grade-calculator" />
-        <meta property="og:title" content="Weighted Grade Calculator – Compute Weighted Averages for Assignments" />
-        <meta property="og:description" content="Easily calculate your weighted grade average by entering grades and their weights. Ideal for students managing assignments, quizzes, and exams with different importance." />
-        <meta property="og:url" content="https://mygwacalculator.com/tools/weighted-grade-calculator" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHead
+        title="Weighted Grade Calculator – Compute Weighted Averages for Assignments"
+        description="Easily calculate your weighted grade average by entering grades and their weights. Ideal for students managing assignments, quizzes, and exams with different importance."
+        keywords="weighted grade calculator, weighted average, assignment grades, grade calculator, academic tools, student grades, free online calculator, weighted grade average"
+        canonicalUrl="https://mygwacalculator.com/tools/weighted-grade-calculator"
+        faqData={faqData}
+        toolType="Weighted Calculator"
+        toolCategory="Educational"
+        toolFeatures={[
+          "Assignment weighting",
+          "Dynamic grade input",
+          "Weight percentage tracking",
+          "Assignment naming",
+          "Instant results",
+          "Mobile-friendly"
+        ]}
+        toolBenefits={[
+          "Accurate weighted calculations",
+          "Assignment management",
+          "Free to use",
+          "No registration required",
+          "Educational insights"
+        ]}
+      />
       <ReadingProgressBar />
       <div className="min-h-screen bg-gradient-to-br from-academic-blue-light via-white to-academic-gray dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-32 pb-8 sm:pb-12 px-3 sm:px-4">
         <div className="max-w-4xl mx-auto">
@@ -468,7 +490,7 @@ const WeightedGradeCalculator = () => {
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
+                {faqData.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                     <AccordionContent className="text-gray-600 dark:text-gray-400">

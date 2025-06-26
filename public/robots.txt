@@ -1,14 +1,13 @@
-
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Sitemap
 Sitemap: https://mygwacalculator.com/sitemap.xml
 
-# Crawl-delay for better server performance
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-# Allow all major search engine bots
+# Allow all major search engines
 User-agent: Googlebot
 Allow: /
 
@@ -21,22 +20,19 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: Baiduspider
-Allow: /
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
 
-User-agent: YandexBot
-Allow: /
+# Allow access to all public pages and tools
+Allow: /tools/
+Allow: /blog/
+Allow: /about/
+Allow: /contact/
+Allow: /faq/
+Allow: /privacy/
+Allow: /terms/
 
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-# Disallow crawling of admin or private areas (if any in future)
-# User-agent: *
-# Disallow: /admin/
-# Disallow: /private/
+# Optimize for mobile
+User-agent: *
+Allow: /mobile/
