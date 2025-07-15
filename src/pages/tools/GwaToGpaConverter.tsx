@@ -99,27 +99,27 @@ const GwaToGpaConverter = () => {
   const faqData = [
     {
       question: "What's the difference between GWA and GPA?",
-      answer: "GWA (General Weighted Average) is commonly used in the Philippines with a 1.0-5.0 scale, while GPA (Grade Point Average) typically uses a 4.0 scale in the US. Both measure academic performance but use different scales."
+      answer: "GWA (General Weighted Average) is commonly used in the Philippines and is based on a 1.0-5.0 scale where lower numbers are better. GPA (Grade Point Average) is used internationally and typically uses a 4.0 scale where higher numbers are better."
     },
     {
       question: "How accurate are these conversions?",
-      answer: "These conversions provide general equivalents, but exact conversion may vary between institutions. Always check with your target school or employer for their specific conversion requirements."
+      answer: "Our conversions use widely accepted formulas and are quite accurate for general purposes. However, different institutions may have specific conversion requirements, so always verify with your target school or employer."
     },
     {
-      question: "Can I convert from percentage to GPA?",
-      answer: "Yes! This tool supports conversion from percentage (0-100) to the 4.0 GPA scale, which is useful for international applications."
+      question: "Which GWA to GPA conversion should I use for US applications?",
+      answer: "For US college applications, use the Philippine GWA (1.0-5.0) to US GPA (4.0) conversion. This is the most commonly accepted conversion for international students from the Philippines."
     },
     {
-      question: "What if my school uses a different scale?",
-      answer: "If your institution uses a scale not listed here, consult your academic office for official conversion guidelines, as conversion methods can vary significantly between schools."
+      question: "Do I need official transcripts after conversion?",
+      answer: "Yes, while this tool helps you understand your equivalent GPA, most institutions will require official transcripts. Some may also ask for a credential evaluation from services like WES or ECE."
     },
     {
-      question: "Is this GWA to GPA converter free to use?",
-      answer: "Yes, our GWA to GPA converter is completely free to use. No registration or payment required."
+      question: "Can I use this for scholarship applications?",
+      answer: "This converter gives you a good estimate for scholarship applications, but always check the specific requirements. Some scholarships may require official credential evaluations."
     },
     {
-      question: "Can I convert multiple grades at once?",
-      answer: "Currently, this tool converts one grade at a time. For multiple conversions, you can use the tool repeatedly or contact us for bulk conversion features."
+      question: "Is this converter free to use?",
+      answer: "Yes, our GWA to GPA converter is completely free with no registration required. Use it as many times as you need for your applications."
     }
   ];
 

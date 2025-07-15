@@ -92,28 +92,28 @@ const GradeAverageCalculator = () => {
 
   const faqData = [
     {
-      question: "How is the grade average calculated?",
-      answer: "The grade average is calculated by adding all your grades together and dividing by the number of grades. This gives you the arithmetic mean of your grades."
+      question: "How does this grade average calculator work?",
+      answer: "Simply add all your numerical grades together and divide by the total number of grades. For example: (85 + 90 + 78) ÷ 3 = 84.33 average."
     },
     {
-      question: "What's the difference between simple average and weighted average?",
-      answer: "A simple average treats all grades equally, while a weighted average gives different importance to different grades based on credit hours or assignment weights."
+      question: "Should I use this or a weighted average calculator?",
+      answer: "Use this for simple averaging where all grades count equally. Use a weighted calculator if your assignments have different importance (like finals worth 40%, quizzes 20%, etc.)."
     },
     {
-      question: "Can I use this for different grading scales?",
-      answer: "Yes! This calculator works with any numerical grading system - 0-100, 0-4.0, or any other scale your institution uses."
+      question: "What grading scales work with this calculator?",
+      answer: "Any numerical scale works - whether it's 0-100 percentage, 0-4.0 GPA, 1.0-5.0 GWA, or any other numerical system. Just make sure all your grades use the same scale."
     },
     {
-      question: "What if I have incomplete grades?",
-      answer: "Only include completed grades with numerical values. Incomplete or pending grades should not be included in your average calculation."
+      question: "Can I mix different types of assignments?",
+      answer: "Yes, you can average any combination of assignments - tests, quizzes, projects, homework - as long as they're all on the same grading scale."
     },
     {
-      question: "Is this grade average calculator free to use?",
-      answer: "Yes, our grade average calculator is completely free to use. No registration or payment required."
+      question: "How many grades can I calculate at once?",
+      answer: "You can add unlimited subjects/grades using the '+' button. The calculator will handle any number of grades you need to average."
     },
     {
-      question: "Can I add or remove subjects?",
-      answer: "Yes, you can add unlimited subjects using the '+' button and remove subjects using the trash icon. You need at least one subject to calculate the average."
+      question: "Is this calculator free to use?",
+      answer: "Yes, completely free with no registration, downloads, or hidden fees. Use it as often as you need to track your academic performance."
     }
   ];
 

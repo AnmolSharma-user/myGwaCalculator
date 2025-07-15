@@ -81,28 +81,28 @@ const CgpaToPercentageCalculator = () => {
 
   const faqData = [
     {
-      question: "What is CGPA?",
-      answer: "CGPA stands for Cumulative Grade Point Average. It's the average of all grade points obtained in all semesters, representing overall academic performance throughout your course."
+      question: "What does CGPA mean and how is it different from percentage?",
+      answer: "CGPA (Cumulative Grade Point Average) is your overall average across all semesters on a point scale (like 10.0). Percentage is the same performance expressed as a number out of 100."
     },
     {
-      question: "Which conversion formula is most accurate?",
-      answer: "The accuracy depends on your institution's specific grading system. The 10-point scale formula (CGPA × 9.5) is commonly used in India, while the 4-point scale is standard in the US."
+      question: "Which CGPA scale should I select?",
+      answer: "Choose based on your institution: 10-point scale is common in India (CBSE, most universities), 4-point scale in the US, and 5-point scale in some other countries. Check your transcript if unsure."
     },
     {
-      question: "Can I use this for job applications?",
-      answer: "Yes, many employers and graduate schools require percentage equivalents. However, always check if your institution provides official conversion guidelines first."
+      question: "Is the CGPA × 9.5 formula always accurate?",
+      answer: "The 9.5 multiplier is widely used for 10-point CGPA systems in India, but some institutions may use different formulas. Always check your university's official conversion method first."
     },
     {
-      question: "What if my CGPA doesn't fit these scales?",
-      answer: "If your institution uses a different scale, consult with your academic office for the official conversion formula, as methods can vary between schools."
+      question: "Can I use this converted percentage for job applications?",
+      answer: "Yes, many employers ask for percentage equivalents. However, some may require official transcripts or conversion certificates from your institution for formal applications."
     },
     {
-      question: "Is this CGPA to percentage calculator free to use?",
-      answer: "Yes, our CGPA to percentage calculator is completely free to use. No registration or payment required."
+      question: "What if my CGPA is on a different scale?",
+      answer: "If your institution uses a scale not listed (like 7-point or 12-point), consult your academic office for the official conversion formula, as methods vary between institutions."
     },
     {
-      question: "Which scale should I use?",
-      answer: "Use the scale that matches your institution's grading system. 10-point scale is common in India, 4-point scale in the US, and 5-point scale in some other countries."
+      question: "Is this CGPA converter free to use?",
+      answer: "Yes, completely free with no registration required. Convert your CGPA to percentage as many times as needed for applications and records."
     }
   ];
 
