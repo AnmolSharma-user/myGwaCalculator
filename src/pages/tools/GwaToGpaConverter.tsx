@@ -250,7 +250,7 @@ const GwaToGpaConverter = () => {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">What is GWA?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  <strong>GWA</strong> stands for <strong>General Weighted Average</strong>. It's used in the Philippines to reflect a student's overall academic performance based on grades and subject unit weight.
+                  <strong>GWA</strong> stands for <strong>General Weighted Average</strong>. It's used in the Philippines to reflect a student\'s overall academic performance based on grades and subject unit weight.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
                   <strong>Formula:</strong> GWA = (Grade × Units for each subject) ÷ Total Units
