@@ -96,17 +96,20 @@ export const SEOHead = ({
     ]
   };
 
-  const faqStructuredData = faqData ? {
+  // Fixed FAQ structured data with proper validation
+  const faqStructuredData = faqData && faqData.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqData.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
+    "mainEntity": faqData
+      .filter(faq => faq.question && faq.answer && faq.question.trim() !== '' && faq.answer.trim() !== '')
+      .map(faq => ({
+        "@type": "Question",
+        "name": faq.question.trim(),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer.trim()
+        }
+      }))
   } : null;
 
   return (
@@ -158,9 +161,17 @@ export const SEOHead = ({
         {JSON.stringify(breadcrumbStructuredData)}
       </script>
       
-      {faqStructuredData && (
+      {/* FAQ Structured Data - Only render if valid data exists */}
+      {faqStructuredData && faqStructuredData.mainEntity && faqStructuredData.mainEntity.length > 0 && (
         <script type="application/ld+json">
           {JSON.stringify(faqStructuredData)}
+        </script>
+      )}
+      
+      {/* Custom Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
         </script>
       )}
       
@@ -180,4 +191,4 @@ export const SEOHead = ({
       <meta name="referrer" content="strict-origin-when-cross-origin" />
     </Helmet>
   );
-}; 
+};
