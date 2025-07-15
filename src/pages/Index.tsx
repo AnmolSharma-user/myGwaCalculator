@@ -1,4 +1,3 @@
-
 import { lazy, Suspense } from "react";
 import { ReadingProgressBar } from "@/components/ReadingProgressBar";
 import { BackToTopButton } from "@/components/BackToTopButton";
@@ -52,7 +51,7 @@ const Index = () => {
       <Helmet>
         <title>Free GWA Calculator - Calculate General Weighted Average Online | 2024</title>
         <meta name="description" content="Calculate your General Weighted Average (GWA) for free with our accurate online tool. Perfect for Filipino students, supports all grading systems. Get instant results!" />
-        <meta name="keywords" content="GWA calculator, General Weighted Average calculator, grade calculator Philippines, academic performance tracker, student GPA calculator, free online calculator" />
+        <meta name="keywords" content="GWA calculator, General Weighted Average calculator, grade calculator Philippines, academic performance tracker, student GPA calculator, free online calculator, main GWA tool" />
         <link rel="canonical" href="https://mygwacalculator.com/" />
         <meta property="og:title" content="Free GWA Calculator - Calculate General Weighted Average Online" />
         <meta property="og:description" content="Calculate your General Weighted Average (GWA) for free with our accurate online tool. Perfect for Filipino students, supports all grading systems." />
@@ -60,6 +59,7 @@ const Index = () => {
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
           {JSON.stringify({
+          "@id": "https://mygwacalculator.com/#faq",
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "GWA Calculator - Free Online Tool",
@@ -81,6 +81,25 @@ const Index = () => {
             }]
           }
         })}
+        </script>
+      </Helmet>
+      
+      {/* Main Page FAQ Schema - Separate from tool pages */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://mygwacalculator.com/#main-faq",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
         </script>
       </Helmet>
       

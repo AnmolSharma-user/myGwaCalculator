@@ -102,6 +102,9 @@ const FinalGradeCalculator = () => {
         description="Discover the score you need on your final exam to achieve your target grade. Use this free final grade calculator to plan your study strategy and reach your academic goals."
         keywords="final grade calculator, required final exam score, grade goal, academic planning, student tools, free online calculator, final exam calculator"
         canonicalUrl="https://mygwacalculator.com/tools/final-grade-calculator"
+        structuredData={{
+          "@id": "https://mygwacalculator.com/tools/final-grade-calculator#faq"
+        }}
         faqData={faqData}
         toolType="Final Grade Calculator"
         toolCategory="Educational"

@@ -130,6 +130,9 @@ const GwaToGpaConverter = () => {
         description="Instantly convert your Philippine General Weighted Average (GWA) to US GPA (4.0 scale) or vice versa. Free, accurate, and easy-to-use online grade conversion tool for students and professionals."
         keywords="GWA to GPA, GWA to GPA converter, Philippine GWA, US GPA, grade conversion, academic tools, student GPA, free online calculator, grade scale converter, international grade conversion"
         canonicalUrl="https://mygwacalculator.com/tools/gwa-to-gpa-converter"
+        structuredData={{
+          "@id": "https://mygwacalculator.com/tools/gwa-to-gpa-converter#faq"
+        }}
         faqData={faqData}
         toolType="Grade Converter"
         toolCategory="Educational"
