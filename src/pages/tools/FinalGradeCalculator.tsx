@@ -70,28 +70,28 @@ const FinalGradeCalculator = () => {
 
   const faqData = [
     {
-      question: "How does the final grade calculator work?",
-      answer: "It uses the formula: Required Score = (Desired Grade - Current Grade × (1 - Final Weight)) ÷ Final Weight. This determines what you need on your final exam to achieve your target grade."
+      question: "How do I use this final grade calculator?",
+      answer: "Enter your current grade percentage, the weight of your final exam (like 30%), and your desired final grade. The calculator shows exactly what score you need on the final."
     },
     {
-      question: "What if the required score is over 100%?",
-      answer: "If the required score exceeds 100%, it means your desired final grade may not be achievable with your current standing. Consider adjusting your target or exploring extra credit opportunities."
+      question: "What does it mean if I need over 100% on the final?",
+      answer: "This means your target grade isn't achievable with your current standing. You might need to lower your target, seek extra credit, or check if there are other grade components you missed."
     },
     {
-      question: "Can I use this for different course structures?",
-      answer: "Yes! This calculator works for any course where you know your current grade and the weight of the final exam in the overall grade calculation."
+      question: "Where do I find my current grade and final exam weight?",
+      answer: "Check your course gradebook or syllabus. Your current grade is usually available online, and the final exam weight should be listed in the syllabus (commonly 20-50%)."
     },
     {
-      question: "What does 'current grade' mean?",
-      answer: "Your current grade is your average score from all completed assignments, quizzes, and exams before the final. This should represent your standing before the final exam."
+      question: "Can I use this calculator mid-semester?",
+      answer: "Yes! Use your current grade at any point in the semester to see what you need on the final. This helps with study planning and goal setting."
     },
     {
-      question: "Is this final grade calculator free to use?",
-      answer: "Yes, our final grade calculator is completely free to use. No registration or payment required."
+      question: "What if my final is worth different percentages in different courses?",
+      answer: "No problem! Just change the final exam weight for each course. The calculator works with any percentage from 10% to 100%."
     },
     {
-      question: "How accurate are the calculations?",
-      answer: "The calculations are mathematically accurate based on the standard final grade formula. However, always verify with your instructor as grading policies may vary."
+      question: "Is this calculator free to use?",
+      answer: "Yes, completely free with no registration needed. Use it for all your courses to plan your final exam preparation strategy."
     }
   ];
 

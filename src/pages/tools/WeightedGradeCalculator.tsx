@@ -114,28 +114,28 @@ const WeightedGradeCalculator = () => {
 
   const faqData = [
     {
-      question: "What is a weighted grade?",
-      answer: "A weighted grade gives different assignments varying levels of importance. For example, a final exam might be worth 40% while homework assignments are worth 20% of your total grade."
-    },
-    {
-      question: "How do I calculate weighted averages?",
-      answer: "Multiply each grade by its weight percentage, add all the results together, then divide by the total weight percentage. Our calculator does this automatically for you."
+      question: "How do weighted grades work?",
+      answer: "Weighted grades assign different importance to assignments. For example, if your final exam is 40% and homework is 20%, the final has twice the impact on your grade as homework."
     },
     {
       question: "What if my weights don't add up to 100%?",
-      answer: "The calculator will still work and show you the total weight percentage. However, for most accurate results, your weights should ideally add up to 100%."
+      answer: "The calculator will still work and show your total weight percentage. However, for most accurate results representing your final grade, weights should add up to 100%."
     },
     {
-      question: "Can I use this for different grading scales?",
-      answer: "Yes! This calculator works with any numerical grading scale - whether it's 0-100, 0-4.0, or any other system your school uses."
+      question: "Can I use this for course grade calculation?",
+      answer: "Yes! This is perfect for calculating your course grade when different assignments have different weights - like midterms 30%, finals 40%, homework 20%, participation 10%."
     },
     {
-      question: "Is this weighted grade calculator free to use?",
-      answer: "Yes, our weighted grade calculator is completely free to use. No registration or payment required."
+      question: "How do I find the weights for my assignments?",
+      answer: "Check your course syllabus - it usually lists the weight breakdown. If not available, ask your instructor for the grading breakdown percentages."
     },
     {
-      question: "Can I add or remove assignments?",
-      answer: "Yes, you can add unlimited assignments using the '+' button and remove assignments using the trash icon. You need at least one assignment to calculate the weighted average."
+      question: "Can I calculate partial semester grades?",
+      answer: "Yes, you can calculate your current standing by entering completed assignments and their weights. This helps you see where you stand mid-semester."
+    },
+    {
+      question: "Is this weighted calculator free?",
+      answer: "Completely free with no registration required. Add unlimited assignments and calculate as many weighted averages as you need."
     }
   ];
 

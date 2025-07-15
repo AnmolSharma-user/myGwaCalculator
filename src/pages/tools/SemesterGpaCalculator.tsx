@@ -121,28 +121,28 @@ const SemesterGpaCalculator = () => {
 
   const faqData = [
     {
-      question: "How is semester GPA calculated?",
-      answer: "Semester GPA is calculated by multiplying each course's grade points by its credit hours, summing these values, and dividing by the total credit hours for that semester."
+      question: "How do I calculate my semester GPA?",
+      answer: "Enter each course with its letter grade and credit hours. The calculator multiplies grade points by credits, sums everything up, and divides by total credits to get your GPA."
     },
     {
-      question: "What's the difference between semester GPA and cumulative GPA?",
-      answer: "Semester GPA covers only one semester's courses, while cumulative GPA includes all semesters completed. This calculator focuses on semester GPA."
+      question: "What's the difference between semester and cumulative GPA?",
+      answer: "Semester GPA is just for one term's courses. Cumulative GPA includes all your completed semesters. This tool calculates semester GPA only."
     },
     {
-      question: "How many credit hours should I take per semester?",
-      answer: "Most full-time students take 12-18 credit hours per semester. The typical course load is 15-16 credit hours, but this varies by institution and program."
+      question: "What if I don't know my credit hours?",
+      answer: "Check your course schedule, transcript, or syllabus. Most courses are 3-4 credit hours, but labs might be 1-2 credits and some courses can be 5-6 credits."
     },
     {
-      question: "What if my school uses a different grading scale?",
-      answer: "This calculator uses the standard 4.0 scale. If your school uses a different scale, you may need to convert grades or use a different calculator specific to your system."
+      question: "Can I calculate GPA for summer or winter courses?",
+      answer: "Absolutely! This works for any semester - fall, spring, summer, or winter terms. Just enter the courses from that specific term."
     },
     {
-      question: "Is this semester GPA calculator free to use?",
-      answer: "Yes, our semester GPA calculator is completely free to use. No registration or payment required."
+      question: "What if I'm taking pass/fail courses?",
+      answer: "Pass/fail courses typically don't count toward GPA calculation. Only include courses with letter grades (A, B, C, D, F) in your GPA calculation."
     },
     {
-      question: "Can I add or remove courses?",
-      answer: "Yes, you can add unlimited courses using the '+' button and remove courses using the trash icon. You need at least one course to calculate the GPA."
+      question: "Is this GPA calculator free?",
+      answer: "Yes, completely free with no limits. Calculate GPA for as many semesters as you need to track your academic progress."
     }
   ];
 
