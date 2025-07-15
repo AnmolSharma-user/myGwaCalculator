@@ -100,7 +100,7 @@ export const SEOHead = ({
   const faqStructuredData = faqData && faqData.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqData
+    "mainEntity": faqData.slice(0, 10) // Limit to 10 FAQs to avoid duplication
       .filter(faq => faq.question && faq.answer && faq.question.trim() !== '' && faq.answer.trim() !== '')
       .map(faq => ({
         "@type": "Question",
@@ -111,6 +111,12 @@ export const SEOHead = ({
         }
       }))
   } : null;
+
+  // Ensure we only render FAQ schema if we have valid, unique questions
+  const shouldRenderFAQ = faqStructuredData && 
+    faqStructuredData.mainEntity && 
+    faqStructuredData.mainEntity.length > 0 &&
+    faqData.some(faq => faq.question && faq.answer);
 
   return (
     <Helmet>
@@ -162,7 +168,7 @@ export const SEOHead = ({
       </script>
       
       {/* FAQ Structured Data - Only render if valid data exists */}
-      {faqStructuredData && faqStructuredData.mainEntity && faqStructuredData.mainEntity.length > 0 && (
+      {shouldRenderFAQ && (
         <script type="application/ld+json">
           {JSON.stringify(faqStructuredData)}
         </script>
