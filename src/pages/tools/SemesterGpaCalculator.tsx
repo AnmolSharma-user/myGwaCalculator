@@ -153,6 +153,9 @@ const SemesterGpaCalculator = () => {
         description="Calculate your semester GPA quickly and accurately. Enter your courses, grades, and credits to get your GPA and track your academic progress."
         keywords="semester GPA calculator, GPA calculator, course grades, academic progress, student GPA, free online calculator, semester grade point average"
         canonicalUrl="https://mygwacalculator.com/tools/semester-gpa-calculator"
+        structuredData={{
+          "@id": "https://mygwacalculator.com/tools/semester-gpa-calculator#faq"
+        }}
         faqData={faqData}
         toolType="GPA Calculator"
         toolCategory="Educational"

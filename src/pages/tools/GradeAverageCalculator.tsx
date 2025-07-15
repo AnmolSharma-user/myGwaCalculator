@@ -124,6 +124,9 @@ const GradeAverageCalculator = () => {
         description="Calculate the average of your grades across multiple subjects with this free online grade average calculator. Perfect for students to track academic performance and improve results."
         keywords="grade average calculator, calculate grade average, subject average, academic performance, student grades, average calculator, grade tracker, free online calculator, simple average calculator"
         canonicalUrl="https://mygwacalculator.com/tools/grade-average-calculator"
+        structuredData={{
+          "@id": "https://mygwacalculator.com/tools/grade-average-calculator#faq"
+        }}
         faqData={faqData}
         toolType="Average Calculator"
         toolCategory="Educational"

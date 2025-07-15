@@ -146,6 +146,9 @@ const WeightedGradeCalculator = () => {
         description="Easily calculate your weighted grade average by entering grades and their weights. Ideal for students managing assignments, quizzes, and exams with different importance."
         keywords="weighted grade calculator, weighted average, assignment grades, grade calculator, academic tools, student grades, free online calculator, weighted grade average"
         canonicalUrl="https://mygwacalculator.com/tools/weighted-grade-calculator"
+        structuredData={{
+          "@id": "https://mygwacalculator.com/tools/weighted-grade-calculator#faq"
+        }}
         faqData={faqData}
         toolType="Weighted Calculator"
         toolCategory="Educational"

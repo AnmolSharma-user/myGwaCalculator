@@ -113,6 +113,9 @@ const CgpaToPercentageCalculator = () => {
         description="Convert your CGPA (on 10, 4, or 5 point scale) to percentage instantly. Free online CGPA to percentage conversion tool for students and job applications."
         keywords="CGPA to percentage, CGPA to percentage calculator, convert CGPA, academic tools, student grades, free online calculator, cumulative grade point average"
         canonicalUrl="https://mygwacalculator.com/tools/cgpa-to-percentage-calculator"
+        structuredData={{
+          "@id": "https://mygwacalculator.com/tools/cgpa-to-percentage-calculator#faq"
+        }}
         faqData={faqData}
         toolType="Grade Converter"
         toolCategory="Educational"
