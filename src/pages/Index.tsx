@@ -110,7 +110,7 @@ const Index = () => {
         <section className="pt-32 pb-8 px-4 sm:pt-36 sm:pb-12 md:pt-40 md:pb-16">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-              GWA Calculator Online Philippines
+              GWA Calculator Philippines
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">
               Calculate Your General Weighted Average Instantly
