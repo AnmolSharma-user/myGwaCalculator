@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "title": "GWA Calculator Philippines",
+    "subtitle": "Calculate Your General Weighted Average Instantly",
+    "description": "The most accurate and easy-to-use GWA calculator for Filipino students. Calculate your General Weighted Average in seconds and track your academic performance effectively. Supports all grading systems."
+  },
+  "features": {
+    "title": "Why Choose Our GWA Calculator?",
+    "description": "The best free online GWA calculator designed specifically for students, providing accurate calculations and helpful academic insights.",
+    "items": {
+      "easy": {
+        "title": "Easy Calculation",
+        "description": "Simple and intuitive interface to calculate your GWA quickly"
+      },
+      "academic": {
+        "title": "Academic Focused",
+        "description": "Designed specifically for students and academic institutions"
+      },
+      "track": {
+        "title": "Track Progress",
+        "description": "Monitor your academic performance and identify areas for improvement"
+      },
+      "free": {
+        "title": "Free to Use",
+        "description": "Completely free tool accessible to all students"
+      }
+    }
+  },
+  "guide": {
+    "title": "Complete Guide to GWA Calculation",
+    "intro_q": "So, what's this GWA thing everyone keeps talking about?",
+    "intro_a": "If you've ever looked at your grades and wondered how you're really doing overall — GWA is the answer.",
+    "intro_story": "Back in college, I remember getting my grades and thinking, \"Okay... but is this good enough for the dean's list?\" That's when I first heard about GWA — and honestly, it changed how I looked at my performance.",
+    "what_is_title": "What Exactly Is GWA?",
+    "what_is_p1": "GWA stands for General Weighted Average. Sounds fancy, but it's just a smarter way of figuring out how well you're doing across all your subjects.",
+    "what_is_p2": "Here's the idea: Not all subjects are equal. Your 3-unit math class? That should count more than your 1-unit PE class, right? GWA gets that. It gives more \"weight\" to subjects with more credit units. That's what makes it more accurate than just averaging your grades.",
+    "why_care_title": "Why Should You Even Care?",
+    "why_care_intro": "Simple — GWA affects a lot of things:",
+    "care_list_1": "Your shot at a scholarship",
+    "care_list_2": "Getting into the dean's list",
+    "care_list_3": "Applying to grad school or even jobs",
+    "why_care_outro": "It's kind of like your academic reputation. A strong GWA shows consistent hard work — not just one lucky test.",
+    "scale_title": "Grading Scale: How It Works",
+    "scale_intro": "In most Philippine colleges, the system looks like this:",
+    "scale_1": "1.0 – Top marks",
+    "scale_2": "1.75 to 2.0 – Still excellent",
+    "scale_3": "2.5 – Decent",
+    "scale_4": "3.0 – Barely passing",
+    "scale_5": "5.0 – Fail",
+    "scale_outro": "Some schools might use a 4.0 scale or percentages instead. So always check what your school uses before calculating your GWA.",
+    "good_gwa_title": "What's Considered a \"Good\" GWA?",
+    "good_gwa_intro": "It depends on your goal, but here's a general guide:",
+    "good_1": "1.0 – 1.75 → You're doing great (and probably making your parents proud)",
+    "good_2": "2.0 – 2.5 → Still solid",
+    "good_3": "2.6 – 3.0 → Not bad, but you've got room to grow",
+    "good_4": "Above 3.0 → Time to rethink a few habits",
+    "good_outro": "Remember, some scholarships or honors programs require you to stay under 2.0 — so it's worth aiming high.",
+    "improve_title": "How To Improve Your GWA (Without Losing Your Mind)",
+    "improve_intro": "Here's what worked for me (and might help you too):",
+    "tip_1_title": "Focus on Big Subjects",
+    "tip_1_desc": "Subjects with more units affect your GWA more. Prioritize them in your study plan.",
+    "tip_2_title": "Don't Cram Everything",
+    "tip_2_desc": "Set a routine. Even just 30 minutes of focused study daily can make a huge difference.",
+    "tip_3_title": "Ask Questions",
+    "tip_3_desc": "Confused? Don't wait. Ask your professor or classmates — or even Google. Seriously.",
+    "tip_4_title": "Be Consistent",
+    "tip_4_desc": "GWA isn't about one test. It's the average of everything. So even small quizzes matter.",
+    "story_title": "A Quick Story From My College Life",
+    "story_p1": "There was this one term I thought I was doing fine. I crushed two subjects but totally ignored one class with 4 units.",
+    "story_p2": "Bad idea.",
+    "story_p3": "That one class pulled my GWA way down.",
+    "story_p4": "After that? I started using a simple GWA calculator online. It showed me how even one subject can shift everything. Total eye-opener.",
+    "calculator_title": "Use a GWA Calculator — Seriously",
+    "calculator_p1": "Why do all the math in your head? Just pop your grades and units into a calculator, and you'll get your exact GWA instantly.",
+    "calculator_p2": "Even better? Most calculators let you switch between grading systems — super handy if you're applying somewhere that uses percentages or the 4.0 scale.",
+    "final_title": "Final Thoughts",
+    "final_p1": "GWA might just look like a number on paper. But it says a lot about how you're doing — and where you're headed.",
+    "final_p2": "The good news? You're in control. With the right tools, habits, and mindset, keeping a strong GWA is totally doable.",
+    "final_p3": "So if you're serious about your grades — use a GWA calculator, stay consistent, and focus on what really counts.",
+    "final_p4": "And hey, don't stress too much. You've got this."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "desc": "Common questions about GWA calculation and our calculator tool",
+    "q1": "How is GWA calculated?",
+    "a1": "GWA (General Weighted Average) is calculated using the formula: GWA = (Sum of Grade × Units) ÷ (Sum of Units). This means each subject's grade is multiplied by its unit value, all products are summed up, then divided by the total number of units. This gives more weight to subjects with higher unit values.",
+    "q2": "What's the difference between GWA and GPA?",
+    "a2": "GWA (General Weighted Average) and GPA (Grade Point Average) are similar concepts but may use different scales. GWA typically uses a 100-point scale (0-100), while GPA often uses a 4.0 scale. Both consider the weight of units/credits, but the calculation method and scale may vary depending on the institution.",
+    "q3": "Can I use this calculator for different grading systems?",
+    "a3": "Yes! Our calculator works with any numerical grading system. Whether your school uses a 100-point scale, 4.0 scale, or any other numerical system, you can input your grades and get an accurate weighted average. Just make sure all grades use the same scale.",
+    "q4": "What if I have incomplete grades or pending subjects?",
+    "a4": "Only include subjects with final grades in your GWA calculation. Incomplete grades (INC) or subjects you're currently taking should not be included until you receive a final numerical grade. This ensures accuracy in your GWA computation.",
+    "q5": "How often should I calculate my GWA?",
+    "a5": "It's recommended to calculate your GWA at the end of each semester or term to track your academic progress. You can also calculate it mid-semester to see how current grades might affect your overall average and plan accordingly for remaining coursework."
+  },
+  "cta": {
+    "title": "Start Calculating Your GWA Now!",
+    "subtitle": "Join thousands of students who trust our free GWA calculator for accurate academic performance tracking.",
+    "button_use": "Use Free Calculator",
+    "button_learn": "Learn More About GWA"
+  },
+   "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "language": "Language"
+   }
+}

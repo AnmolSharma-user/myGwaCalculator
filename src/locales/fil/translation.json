@@ -1,0 +1,110 @@
+{
+    "hero": {
+        "title": "GWA Calculator Philippines",
+        "subtitle": "Kalkulahin ang Iyong General Weighted Average Agad",
+        "description": "Ang pinakatumpak at madaling gamitin na GWA calculator para sa mga estudyanteng Pilipino. Kalkulahin ang iyong General Weighted Average sa ilang segundo at subaybayan ang iyong academic performance nang epektibo. Suportado ang lahat ng grading systems."
+    },
+    "features": {
+        "title": "Bakit Piliin ang Aming GWA Calculator?",
+        "description": "Ang pinakamahusay na libreng online GWA calculator na sadyang dinisenyo para sa mga estudyante, nagbibigay ng tumpak na kalkulasyon at kapaki-pakinabang na academic insights.",
+        "items": {
+            "easy": {
+                "title": "Madaling Kalkulasyon",
+                "description": "Simple at intuitive na interface upang mabilis na makalkula ang iyong GWA"
+            },
+            "academic": {
+                "title": "Nakatuon sa Akademiko",
+                "description": "Sadyang dinisenyo para sa mga estudyante at institusyong akademiko"
+            },
+            "track": {
+                "title": "Subaybayan ang Progreso",
+                "description": "Monitor ang iyong academic performance at tukuyin ang mga aspetong kailangang pagbutihin"
+            },
+            "free": {
+                "title": "Libreng Gamitin",
+                "description": "Ganap na libreng tool na accessible sa lahat ng estudyante"
+            }
+        }
+    },
+    "guide": {
+        "title": "Kumpletong Gabay sa GWA Calculation",
+        "intro_q": "Ano nga ba itong GWA na pinag-uusapan ng lahat?",
+        "intro_a": "Kung tiningnan mo na ang iyong mga marka at nagtaka kung kumusta ka na sa pangkalahatan — GWA ang sagot.",
+        "intro_story": "Noong kolehiyo ako, naalala ko nung nakuha ko ang aking mga grado at naisip, \"Okay... pero sapat na ba ito para sa dean's list?\" Noon ko unang narinig ang tungkol sa GWA — at sa totoo lang, binago nito ang pagtingin ko sa aking performance.",
+        "what_is_title": "Ano Nga Ba ang GWA?",
+        "what_is_p1": "Ang GWA ay nangangahulugang General Weighted Average. Sosyal pakinggan, pero mas matalinong paraan lang ito ng pag-alam kung gaano kahusay ang iyong ginagawa sa lahat ng iyong asignatura.",
+        "what_is_p2": "Ganito ang ideya: Hindi lahat ng asignatura ay pantay-pantay. Ang iyong 3-unit math class? Mas malaki dapat ang bigat niyan kaysa sa iyong 1-unit PE class, 'di ba? Gets 'yan ng GWA. Mas binibigyan nito ng \"bigat\" ang mga asignaturang may mas maraming credit units. Iyan ang dahilan kung bakit mas tumpak ito kaysa sa simpleng pag-average lang ng iyong mga grado.",
+        "why_care_title": "Bakit Mo Dapat Itong Intindihin?",
+        "why_care_intro": "Simple lang — malaki ang epekto ng GWA sa maraming bagay:",
+        "care_list_1": "Ang iyong tsansa sa scholarship",
+        "care_list_2": "Pagpasok sa dean's list",
+        "care_list_3": "Pag-apply sa grad school o kahit sa trabaho",
+        "why_care_outro": "Parang academic reputation mo ito. Ang mataas na GWA ay nagpapakita ng consistent na pagsisikap — hindi lang isang tsambang test.",
+        "scale_title": "Grading Scale: Paano Ito Gumagana",
+        "scale_intro": "Sa karamihan ng mga kolehiyo sa Pilipinas, ganito ang sistema:",
+        "scale_1": "1.0 – Pinakamataas na marka",
+        "scale_2": "1.75 hanggang 2.0 – Mahusay pa rin",
+        "scale_3": "2.5 – Ayos lang",
+        "scale_4": "3.0 – Pasang-awa",
+        "scale_5": "5.0 – Bagsak",
+        "scale_outro": "May ilang paaralan na gumagamit ng 4.0 scale o percentages. Kaya laging suriin kung ano ang ginagamit ng iyong paaralan bago kalkulahin ang iyong GWA.",
+        "good_gwa_title": "Ano ang Itinuturing na \"Magandang\" GWA?",
+        "good_gwa_intro": "Depende ito sa iyong layunin, pero narito ang isang pangkalahatang gabay:",
+        "good_1": "1.0 – 1.75 → Napakahusay mo (at malamang proud ang parents mo)",
+        "good_2": "2.0 – 2.5 → Solid pa rin",
+        "good_3": "2.6 – 3.0 → Hindi masama, pero may room for improvement pa",
+        "good_4": "Higit sa 3.0 → Oras na para baguhin ang ilang gawi",
+        "good_outro": "Tandaan, may ilang scholarship o honors programs na nangangailangan na manatili ka sa ilalim ng 2.0 — kaya sulit na mag-aim high.",
+        "improve_title": "Paano Mapapabuti ang Iyong GWA (Nang Hindi Nawawala sa Sarili)",
+        "improve_intro": "Narito ang gumana sa akin (at maaaring makatulong din sa iyo):",
+        "tip_1_title": "Magfocus sa Malalaking Subjects",
+        "tip_1_desc": "Ang mga subjects na may mas maraming units ay mas malaki ang epekto sa GWA. Unahin ang mga ito sa iyong study plan.",
+        "tip_2_title": "Huwag Mag-Cram",
+        "tip_2_desc": "Gumawa ng routine. Kahit 30 minutong focused study araw-araw ay malaki na ang magagawa.",
+        "tip_3_title": "Magtanong",
+        "tip_3_desc": "Nalilito? Huwag maghintay. Magtanong sa iyong propesor o mga kaklase — o kahit kay Google. Seryoso.",
+        "tip_4_title": "Maging Consistent",
+        "tip_4_desc": "Ang GWA ay hindi tungkol sa isang test lang. Ito ay average ng lahat. Kaya kahit maliliit na quizzes ay mahalaga.",
+        "story_title": "Isang Mabilis na Kwento Mula sa Aking College Life",
+        "story_p1": "May isang term na akala ko ay ayos lang ako. Ang galing ko sa dalawang subjects pero binalewala ko ang isang klase na may 4 units.",
+        "story_p2": "Malaking pagkakamali.",
+        "story_p3": "Hinila ng klaseng iyon ang aking GWA pababa.",
+        "story_p4": "Pagkatapos nun? Nagsimula akong gumamit ng simpleng GWA calculator online. Ipinakita nito sa akin kung paano makakapagpabago ng lahat ang kahit isang subject lang. Total eye-opener.",
+        "calculator_title": "Gumamit ng GWA Calculator — Seryoso",
+        "calculator_p1": "Bakit mo pa pahihirapan ang sarili mo sa math? I-input lang ang iyong mga grado at units sa calculator, at makukuha mo na agad ang iyong eksaktong GWA.",
+        "calculator_p2": "Mas maganda pa? Karamihan sa mga calculators ay nagpapahintulot na magpalit ng grading systems — super handy kung nag-a-apply ka sa kung saan na gumagamit ng percentages o 4.0 scale.",
+        "final_title": "Huling Kaisipan",
+        "final_p1": "Maaaring magmukhang numero lang ang GWA sa papel. Pero marami itong sinasabi tungkol sa kung paano ka nag-aaral — at kung saan ka patungo.",
+        "final_p2": "Ang magandang balita? Nasa kontrol mo ito. Gamit ang tamang tools, gawi, at mindset, kayang-kaya ang pagpapanatili ng mataas na GWA.",
+        "final_p3": "Kaya kung seryoso ka sa iyong mga grado — gumamit ng GWA calculator, maging consistent, at magfocus sa kung ano talaga ang mahalaga.",
+        "final_p4": "At uy, huwag masyadong mag-stress. Kaya mo 'yan."
+    },
+    "faq": {
+        "title": "Madalas Itanong (FAQ)",
+        "desc": "Mga karaniwang tanong tungkol sa GWA calculation at aming calculator tool",
+        "q1": "Paano kinakalkula ang GWA?",
+        "a1": "Ang GWA (General Weighted Average) ay kinakalkula gamit ang formula: GWA = (Sum of Grade × Units) ÷ (Sum of Units). Ibig sabihin, ang grado sa bawat asignatura ay imu-multiply sa unit value nito, pagsasamahin ang lahat ng produkto, at pagkatapos ay idi-divide sa kabuuang bilang ng units. Nagbibigay ito ng mas malaking bigat sa mga asignaturang may mas mataas na unit values.",
+        "q2": "Ano ang pagkakaiba ng GWA at GPA?",
+        "a2": "Ang GWA (General Weighted Average) at GPA (Grade Point Average) ay magkatulad na konsepto ngunit maaaring gumamit ng magkaibang scales. Karaniwang gumagamit ang GWA ng 100-point scale (0-100) o 1.0-5.0 scale, habang ang GPA ay madalas gumagamit ng 4.0 scale. Parehong isinasaalang-alang ang bigat ng units/credits.",
+        "q3": "Pwede ko bang gamitin ang calculator na ito para sa ibang grading systems?",
+        "a3": "Oo! Gumagana ang aming calculator sa anumang numerical grading system. Gumagamit man ang iyong paaralan ng 100-point scale, 4.0 scale, o anumang iba pang numerical system, maaari mong i-input ang iyong mga grado at makakuha ng tumpak na weighted average. Siguraduhin lang na pare-pareho ang scale ng lahat ng grado.",
+        "q4": "Paano kung mayroon akong incomplete grades o pending subjects?",
+        "a4": "Isama lamang ang mga asignatura na may final grades sa iyong GWA calculation. Ang mga incomplete grades (INC) o mga asignaturang kasalukuyan mo pang kinukuha ay hindi dapat isama hangga't hindi ka nakakatanggap ng final numerical grade. Tinitiyak nito ang katumpakan ng iyong GWA computation.",
+        "q5": "Gaano kadalas ko dapat kalkulahin ang aking GWA?",
+        "a5": "Inirerekomendang kalkulahin ang iyong GWA sa pagtatapos ng bawat semester o term upang masubaybayan ang iyong academic progress. Maaari mo rin itong kalkulahin sa kalagitnaan ng semester upang makita kung paano makakaapekto ang mga kasalukuyang grado sa iyong overall average at makapagplano nang naaayon."
+    },
+    "cta": {
+        "title": "Simulan ang Pagkalkula ng Iyong GWA Ngayon!",
+        "subtitle": "Sumali sa libu-libong estudyante na nagtitiwala sa aming libreng GWA calculator para sa tumpak na pagsubaybay sa academic performance.",
+        "button_use": "Gamitin ang Libreng Calculator",
+        "button_learn": "Matuto Pa Tungkol sa GWA"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "Tungkol sa Amin",
+        "blog": "Blog",
+        "faq": "FAQ",
+        "contact": "Makipag-ugnayan",
+        "language": "Wika"
+    }
+}

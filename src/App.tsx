@@ -1,5 +1,6 @@
 
 import { Toaster } from "@/components/ui/toaster";
+import "./i18n";
 import { Toaster as Sonner } from "sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -14,9 +15,11 @@ import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import GradesInCollegeBlog from "./pages/GradesInCollegeBlog";
+import DeansListBlog from "./pages/DeansListBlog";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Disclaimer from "./pages/Disclaimer";
 import NotFound from "./pages/NotFound";
 // Tool pages
 import GwaToGpaConverter from "./pages/tools/GwaToGpaConverter";
@@ -44,11 +47,14 @@ const App = () => (
                   <Route path="/about" element={<About />} />
                   <Route path="/faq" element={<FAQ />} />
                   <Route path="/blog" element={<Blog />} />
+                  <Route path="/disclaimer" element={<Disclaimer />} />
                   <Route path="/blog/how-to-compute-gwa" element={<BlogDetail />} />
                   <Route path="/blog/how-to-compute-grades-in-college" element={<GradesInCollegeBlog />} />
+                  <Route path="/blog/deans-list-requirements-philippines" element={<DeansListBlog />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/privacy" element={<Privacy />} />
                   <Route path="/terms" element={<Terms />} />
+                  <Route path="/disclaimer" element={<Disclaimer />} />
                   {/* Tool Routes */}
                   <Route path="/tools/gwa-to-gpa-converter" element={<GwaToGpaConverter />} />
                   <Route path="/tools/grade-average-calculator" element={<GradeAverageCalculator />} />

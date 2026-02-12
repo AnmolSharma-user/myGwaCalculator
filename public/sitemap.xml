@@ -7,7 +7,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://mygwacalculator.com/</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,28 +15,28 @@
   <!-- Main Pages -->
   <url>
     <loc>https://mygwacalculator.com/about</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/faq</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/contact</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/blog</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,14 +44,21 @@
   <!-- Blog Posts -->
   <url>
     <loc>https://mygwacalculator.com/blog/how-to-compute-gwa</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/blog/how-to-compute-grades-in-college</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mygwacalculator.com/blog/deans-list-requirements-philippines</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -59,57 +66,71 @@
   <!-- Tool Pages - High Priority -->
   <url>
     <loc>https://mygwacalculator.com/tools/gwa-to-gpa-converter</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/tools/grade-average-calculator</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/tools/weighted-grade-calculator</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/tools/final-grade-calculator</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/tools/semester-gpa-calculator</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/tools/cgpa-to-percentage-calculator</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Legal Pages -->
   <url>
+    <loc>https://mygwacalculator.com/disclaimer</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
     <loc>https://mygwacalculator.com/privacy</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://mygwacalculator.com/terms</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://mygwacalculator.com/disclaimer</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

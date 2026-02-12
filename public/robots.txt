@@ -4,35 +4,6 @@ Allow: /
 # Sitemap
 Sitemap: https://mygwacalculator.com/sitemap.xml
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Allow all major search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-# Block access to admin areas (if any)
+# Block access to admin/private areas
 Disallow: /admin/
 Disallow: /private/
-
-# Allow access to all public pages and tools
-Allow: /tools/
-Allow: /blog/
-Allow: /about/
-Allow: /contact/
-Allow: /faq/
-Allow: /privacy/
-Allow: /terms/
-
-# Optimize for mobile
-User-agent: *
-Allow: /mobile/

@@ -25,6 +25,16 @@ const Blog = () => {
     readTime: "7 min read",
     category: "Guide",
     tags: ["College", "Grades", "Academic", "Calculator"]
+  }, {
+    id: 3,
+    title: "Dean's List Requirements in the Philippines: UP, PLM, PUP, UST, DLSU & ADMU Guide (2025)",
+    excerpt: "Aiming for the Dean's List? We've compiled the latest GWA requirements for the top universities in the country. Check if you made the cut for UP, UST, DLSU, and more.",
+    slug: "deans-list-requirements-philippines",
+    author: "Academic Team",
+    date: "2025-02-12",
+    readTime: "6 min read",
+    category: "Guide",
+    tags: ["Dean's List", "Latin Honors", "GWA Requirements", "Philippines"]
   }];
 
   return (
@@ -105,15 +115,15 @@ const Blog = () => {
                       </span>
                     ))}
                   </div>
-                  
+
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
                     {blogPosts[0].title}
                   </h3>
-                  
+
                   <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg sm:text-xl leading-relaxed">
                     {blogPosts[0].excerpt}
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
                     <div className="flex flex-wrap items-center gap-6 text-gray-500 dark:text-gray-400">
                       <div className="flex items-center gap-2">
@@ -126,9 +136,9 @@ const Blog = () => {
                       </div>
                       <span className="font-medium">{blogPosts[0].readTime}</span>
                     </div>
-                    
-                    <Link 
-                      to={`/blog/${blogPosts[0].slug}`} 
+
+                    <Link
+                      to={`/blog/${blogPosts[0].slug}`}
                       className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors group"
                     >
                       Read Full Article
@@ -156,15 +166,15 @@ const Blog = () => {
                       </span>
                     ))}
                   </div>
-                  
+
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                     {blogPosts[1].title}
                   </h3>
-                  
+
                   <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                     {blogPosts[1].excerpt}
                   </p>
-                  
+
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                       <div className="flex items-center gap-1">
@@ -177,9 +187,9 @@ const Blog = () => {
                       </div>
                       <span>{blogPosts[1].readTime}</span>
                     </div>
-                    
-                    <Link 
-                      to={`/blog/${blogPosts[1].slug}`} 
+
+                    <Link
+                      to={`/blog/${blogPosts[1].slug}`}
                       className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors group"
                     >
                       Read More
@@ -198,14 +208,14 @@ const Blog = () => {
                 Stay Updated
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
-                Get the latest tips, guides, and updates about academic success 
+                Get the latest tips, guides, and updates about academic success
                 delivered directly to your email inbox.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email" 
-                  className="flex-1 px-6 py-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-lg" 
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-6 py-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-lg"
                 />
                 <button className="bg-blue-600 dark:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-700 transition-colors text-lg">
                   Subscribe

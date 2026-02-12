@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Calculator, ChevronDown } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -50,16 +51,15 @@ export const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-sm font-medium transition-all duration-200 px-3 py-2 rounded-lg hover:bg-white/60 dark:hover:bg-gray-800/60 ${
-                  isActive(item.path)
-                    ? "text-academic-blue dark:text-blue-400 bg-white/40 dark:bg-gray-800/40"
-                    : "text-gray-600 dark:text-gray-300 hover:text-academic-blue dark:hover:text-blue-400"
-                }`}
+                className={`text-sm font-medium transition-all duration-200 px-3 py-2 rounded-lg hover:bg-white/60 dark:hover:bg-gray-800/60 ${isActive(item.path)
+                  ? "text-academic-blue dark:text-blue-400 bg-white/40 dark:bg-gray-800/40"
+                  : "text-gray-600 dark:text-gray-300 hover:text-academic-blue dark:hover:text-blue-400"
+                  }`}
               >
                 {item.name}
               </Link>
             ))}
-            
+
             {/* More Tools Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-1 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-academic-blue dark:hover:text-blue-400 transition-all duration-200 px-3 py-2 rounded-lg hover:bg-white/60 dark:hover:bg-gray-800/60">
@@ -80,13 +80,17 @@ export const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
+
+
             <div className="flex items-center space-x-3">
+              <LanguageSwitcher />
               <ThemeToggle />
             </div>
           </nav>
 
           {/* Mobile menu button and controls */}
           <div className="md:hidden flex items-center space-x-3">
+            <LanguageSwitcher />
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -106,16 +110,15 @@ export const Header = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isActive(item.path)
-                      ? "text-academic-blue dark:text-blue-400 bg-white/40 dark:bg-gray-800/40"
-                      : "text-gray-600 dark:text-gray-300 hover:text-academic-blue dark:hover:text-blue-400 hover:bg-white/60 dark:hover:bg-gray-800/60"
-                  }`}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isActive(item.path)
+                    ? "text-academic-blue dark:text-blue-400 bg-white/40 dark:bg-gray-800/40"
+                    : "text-gray-600 dark:text-gray-300 hover:text-academic-blue dark:hover:text-blue-400 hover:bg-white/60 dark:hover:bg-gray-800/60"
+                    }`}
                 >
                   {item.name}
                 </Link>
               ))}
-              
+
               {/* Mobile Tools Section */}
               <div className="pt-2 border-t border-white/20 dark:border-gray-800/30 mt-2">
                 <div className="px-3 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">

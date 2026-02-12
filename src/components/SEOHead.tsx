@@ -62,12 +62,7 @@ export const SEOHead = ({
       "@type": "SoftwareApplication",
       "name": title,
       "operatingSystem": "Web Browser",
-      "applicationCategory": "Education",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1500"
-      }
+      "applicationCategory": "Education"
     }
   };
 
