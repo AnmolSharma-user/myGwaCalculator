@@ -301,7 +301,7 @@ Whether you use our calculators or do it manually, the important thing is that y
         <meta name="description" content="Learn how to calculate your college grades step-by-step. Master weighted grading systems, GPA calculation, and grade management for academic success in the Philippines." />
         <meta name="keywords" content="how to compute college grades, grade calculator, weighted grades, college grading system, GPA calculation, academic performance, Philippines college, university grades" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="author" content="Academic Team" />
+        <meta name="author" content="Anmol Gautam" />
         <link rel="canonical" href={currentUrl} />
 
         {/* Open Graph / Facebook */}
@@ -316,7 +316,7 @@ Whether you use our calculators or do it manually, the important thing is that y
         <meta property="og:image:height" content="630" />
         <meta property="article:published_time" content="2025-01-22T00:00:00+08:00" />
         <meta property="article:modified_time" content="2025-01-22T00:00:00+08:00" />
-        <meta property="article:author" content="Academic Team" />
+        <meta property="article:author" content="Anmol Gautam" />
         <meta property="article:section" content="Education" />
         <meta property="article:tag" content="College Grades" />
         <meta property="article:tag" content="Academic Performance" />

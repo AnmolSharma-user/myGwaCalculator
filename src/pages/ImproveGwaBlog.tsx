@@ -65,7 +65,7 @@ const ImproveGwaBlog = () => {
                 <meta property="og:image" content="https://mygwacalculator.com/images/blog-improve-gwa.png" />
                 <meta property="og:url" content="https://mygwacalculator.com/blog/how-to-improve-gwa-in-college" />
                 <meta property="article:published_time" content="2025-03-05T00:00:00+08:00" />
-                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": "How to Improve Your GWA in College Philippines", "image": "https://mygwacalculator.com/images/blog-improve-gwa.png", "datePublished": "2025-03-05T00:00:00+08:00", "author": { "@type": "Organization", "name": "GWA Calculator Team" }, "publisher": { "@type": "Organization", "name": "GWA Calculator" } })}</script>
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": "How to Improve Your GWA in College Philippines", "image": "https://mygwacalculator.com/images/blog-improve-gwa.png", "datePublished": "2025-03-05T00:00:00+08:00", "dateModified": "2025-03-05T00:00:00+08:00", "author": { "@type": "Person", "name": "Anmol Gautam", "url": "https://mygwacalculator.com/about" }, "publisher": { "@type": "Organization", "name": "mygwacalculator.com", "url": "https://mygwacalculator.com", "logo": { "@type": "ImageObject", "url": "https://mygwacalculator.com/android-chrome-512x512.png" } } })}</script>
                 <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqData.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) })}</script>
             </Helmet>
 

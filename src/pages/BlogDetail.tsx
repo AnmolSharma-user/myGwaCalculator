@@ -390,40 +390,6 @@ Whether you're pushing for honors, applying for a scholarship, or just trying to
           })}
         </script>
 
-        {/* FAQ Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is GWA?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "GWA stands for General Weighted Average. It's your overall performance score in school that takes into account how much each subject matters based on their credit units."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How do you calculate GWA?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "GWA = (Grade × Units for each subject) ÷ Total Units. You multiply each grade by its units, sum all results, then divide by total units."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is the GWA calculator free to use?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes! All our calculators and tools are completely free to use. No hidden fees, no subscriptions required."
-                }
-              }
-            ]
-          })}
-        </script>
-
         {/* Breadcrumb Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({

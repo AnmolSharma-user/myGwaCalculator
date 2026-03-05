@@ -59,8 +59,8 @@ const GoodGwaBlog = () => {
                     "image": "https://mygwacalculator.com/images/blog-good-gwa.png",
                     "datePublished": "2025-03-05T00:00:00+08:00",
                     "author": { "@type": "Person", "name": "Anmol Gautam", "url": "https://mygwacalculator.com/about", "jobTitle": "Founder", "worksFor": { "@type": "Organization", "name": "mygwacalculator.com" } },
-                    "publisher": { "@type": "Organization", "name": "GWA Calculator", "logo": { "@type": "ImageObject", "url": "https://mygwacalculator.com/logo.png" } },
-                    "url": currentUrl, "inLanguage": "en-PH"
+                    "publisher": { "@type": "Organization", "name": "mygwacalculator.com", "url": "https://mygwacalculator.com", "logo": { "@type": "ImageObject", "url": "https://mygwacalculator.com/android-chrome-512x512.png" } },
+                    "url": currentUrl, "inLanguage": "en-PH", "dateModified": "2025-03-05T00:00:00+08:00"
                 })}</script>
                 <script type="application/ld+json">{JSON.stringify({
                     "@context": "https://schema.org", "@type": "FAQPage",

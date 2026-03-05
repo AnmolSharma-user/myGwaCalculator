@@ -264,7 +264,7 @@ Study smart, track your grades, and good luck this semester!
                 <meta name="description" content="Complete guide to Dean's List GWA requirements for top Philippine universities (UP, UST, DLSU, ADMU, PUP, PLM). Learn the grades you need to be a university scholar." />
                 <meta name="keywords" content="Dean's List requirements Philippines, UP University Scholar GWA, UST Dean's List requirements, PUP President's Lister, latin honors philippines, GWA calculator for honors" />
                 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-                <meta name="author" content="Academic Team" />
+                <meta name="author" content="Anmol Gautam" />
                 <link rel="canonical" href={currentUrl} />
 
                 {/* Open Graph */}
@@ -289,15 +289,17 @@ Study smart, track your grades, and good luck this semester!
                         "datePublished": "2025-02-12T00:00:00+08:00",
                         "dateModified": "2025-02-12T00:00:00+08:00",
                         "author": {
-                            "@type": "Organization",
-                            "name": "GWA Calculator Team"
+                            "@type": "Person",
+                            "name": "Anmol Gautam",
+                            "url": "https://mygwacalculator.com/about"
                         },
                         "publisher": {
                             "@type": "Organization",
-                            "name": "GWA Calculator",
+                            "name": "mygwacalculator.com",
+                            "url": "https://mygwacalculator.com",
                             "logo": {
                                 "@type": "ImageObject",
-                                "url": "https://mygwacalculator.com/logo.png"
+                                "url": "https://mygwacalculator.com/android-chrome-512x512.png"
                             }
                         }
                     })}

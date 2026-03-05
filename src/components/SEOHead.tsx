@@ -19,84 +19,53 @@ export const SEOHead = ({
   description,
   keywords,
   canonicalUrl,
-  ogImage = "https://mygwacalculator.com/images/gwa-calculator-preview.png",
+  ogImage = "https://mygwacalculator.com/android-chrome-512x512.png",
   structuredData,
   faqData,
-  toolType = "Calculator",
-  toolCategory = "Educational",
-  toolFeatures = [],
-  toolBenefits = []
 }: SEOHeadProps) => {
+  // SoftwareApplication schema — canonical schema for all calculator tool pages.
   const baseStructuredData = {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
+    "@type": "SoftwareApplication",
     "name": title,
     "description": description,
     "url": canonicalUrl,
-    "applicationCategory": toolCategory,
+    "applicationCategory": "EducationalApplication",
     "operatingSystem": "Any",
-    "browserRequirements": "Requires JavaScript",
-    "softwareVersion": "2.0",
-    "dateCreated": "2024-01-01",
-    "dateModified": new Date().toISOString().split('T')[0],
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "USD",
+      "priceCurrency": "PHP",
       "availability": "https://schema.org/InStock"
     },
-    "creator": {
+    "author": {
+      "@type": "Person",
+      "name": "Anmol Gautam",
+      "url": "https://mygwacalculator.com/about"
+    },
+    "publisher": {
       "@type": "Organization",
-      "name": "GWA Calculator",
-      "url": "https://mygwacalculator.com"
-    },
-    "audience": {
-      "@type": "Audience",
-      "audienceType": "Students"
-    },
-    "keywords": keywords,
-    "inLanguage": "en-US",
-    "isAccessibleForFree": true,
-    "usageInfo": "https://mygwacalculator.com/about",
-    "mainEntity": {
-      "@type": "SoftwareApplication",
-      "name": title,
-      "operatingSystem": "Web Browser",
-      "applicationCategory": "Education"
-    }
-  };
-
-  const breadcrumbStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://mygwacalculator.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Tools",
-        "item": "https://mygwacalculator.com/tools"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": title,
-        "item": canonicalUrl
+      "name": "mygwacalculator.com",
+      "url": "https://mygwacalculator.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mygwacalculator.com/android-chrome-512x512.png"
       }
-    ]
+    },
+    "inLanguage": "en-PH",
+    "isAccessibleForFree": true
   };
 
-  // Fixed FAQ structured data with proper validation
+  // FAQPage — ONLY rendered when faqData is provided via SEOHead.
+  // IMPORTANT: If a page uses SEOHead AND passes faqData here, it must NOT also
+  // emit its own FAQPage schema in a separate <Helmet> block — that causes
+  // the "Duplicate field FAQPage" critical error in Google Search Console.
   const faqStructuredData = faqData && faqData.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqData.slice(0, 10) // Limit to 10 FAQs to avoid duplication
-      .filter(faq => faq.question && faq.answer && faq.question.trim() !== '' && faq.answer.trim() !== '')
+    "mainEntity": faqData
+      .filter(faq => faq.question && faq.answer)
+      .slice(0, 10)
       .map(faq => ({
         "@type": "Question",
         "name": faq.question.trim(),
@@ -107,21 +76,14 @@ export const SEOHead = ({
       }))
   } : null;
 
-  // Ensure we only render FAQ schema if we have valid, unique questions
-  const shouldRenderFAQ = faqStructuredData && 
-    faqStructuredData.mainEntity && 
-    faqStructuredData.mainEntity.length > 0 &&
-    faqData.some(faq => faq.question && faq.answer);
-
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph / Facebook */}
+
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
@@ -129,67 +91,41 @@ export const SEOHead = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:locale" content="en_US" />
-      <meta property="og:site_name" content="GWA Calculator" />
-      
-      {/* Twitter */}
+      <meta property="og:locale" content="en_PH" />
+      <meta property="og:site_name" content="mygwacalculator.com" />
+
+      {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:creator" content="@gwacalculator" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="author" content="GWA Calculator" />
-      <meta name="application-name" content="GWA Calculator" />
-      <meta name="theme-color" content="#1e40af" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="geo.region" content="Philippines" />
-      <meta name="geo.country" content="PH" />
-      <meta name="language" content="en" />
-      <meta name="rating" content="general" />
-      <meta name="distribution" content="global" />
-      <meta name="revisit-after" content="7 days" />
-      
-      {/* Structured Data */}
+
+      {/* Robots & Geo */}
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+      <meta name="author" content="Anmol Gautam" />
+      <meta name="geo.region" content="PH" />
+      <meta name="geo.country" content="Philippines" />
+      <meta name="language" content="en-PH" />
+
+      {/* Schema: SoftwareApplication */}
       <script type="application/ld+json">
         {JSON.stringify(baseStructuredData)}
       </script>
-      
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbStructuredData)}
-      </script>
-      
-      {/* FAQ Structured Data - Only render if valid data exists */}
-      {shouldRenderFAQ && (
+
+      {/* Schema: FAQPage — only when faqData passed */}
+      {faqStructuredData && (
         <script type="application/ld+json">
           {JSON.stringify(faqStructuredData)}
         </script>
       )}
-      
-      {/* Custom Structured Data */}
+
+      {/* Schema: Custom override */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
-      
-      {/* Additional Meta Tags for Tools */}
-      <meta name="tool-type" content={toolType} />
-      <meta name="tool-category" content={toolCategory} />
-      {toolFeatures.length > 0 && (
-        <meta name="tool-features" content={toolFeatures.join(', ')} />
-      )}
-      {toolBenefits.length > 0 && (
-        <meta name="tool-benefits" content={toolBenefits.join(', ')} />
-      )}
-      
-      {/* Performance and Security */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="referrer" content="strict-origin-when-cross-origin" />
     </Helmet>
   );
 };
