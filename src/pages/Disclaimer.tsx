@@ -15,7 +15,7 @@ const Disclaimer = () => {
                 <meta property="og:title" content="Disclaimer - GWA Calculator Philippines" />
                 <meta property="og:description" content="Legal disclaimer and terms of use for GWA Calculator Philippines." />
                 <meta property="og:url" content="https://mygwacalculator.com/disclaimer" />
-                <meta name="robots" content="noindex, follow" />
+                <meta name="robots" content="index, follow" />
             </Helmet>
 
             <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-32 pb-12 px-4 transition-colors">

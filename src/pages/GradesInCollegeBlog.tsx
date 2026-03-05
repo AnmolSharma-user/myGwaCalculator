@@ -9,11 +9,12 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { AuthorCard } from "@/components/AuthorCard";
 
 const GradesInCollegeBlog = () => {
   const { toast } = useToast();
   const [copied, setCopied] = useState(false);
-  
+
   const article = {
     id: 2,
     title: "How to Compute Grades in College (Without the Headache)",
@@ -191,7 +192,7 @@ Computing your grades shouldn't be a mystery. With the right tools and understan
 Remember: Knowledge is power, and knowing how to calculate your grades gives you the power to take control of your academic success.
 
 Whether you use our calculators or do it manually, the important thing is that you're actively monitoring your progress. Your future self will thank you for staying organized and informed throughout your college journey.`,
-    author: "Academic Team",
+    author: "Anmol Gautam",
     date: "2025-01-22",
     readTime: "7 min read",
     category: "Guide",
@@ -204,7 +205,7 @@ Whether you use our calculators or do it manually, the important thing is that y
   const handleShareClick = async (platform?: string) => {
     const url = window.location.href;
     const text = `Check out this helpful guide: ${article.title}`;
-    
+
     if (platform === 'twitter') {
       window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
     } else if (platform === 'facebook') {
@@ -283,7 +284,7 @@ Whether you use our calculators or do it manually, the important thing is that y
           <p key={index} className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed text-base md:text-lg">
             <span dangerouslySetInnerHTML={{
               __html: line.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-gray-900 dark:text-white">$1</strong>')
-                          .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
+                .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
             }} />
           </p>
         );
@@ -302,7 +303,7 @@ Whether you use our calculators or do it manually, the important thing is that y
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="author" content="Academic Team" />
         <link rel="canonical" href={currentUrl} />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
         <meta property="og:title" content="How to Compute Grades in College - Complete Guide | Grade Calculator Philippines" />
@@ -384,7 +385,7 @@ Whether you use our calculators or do it manually, the important thing is that y
                 "url": "https://mygwacalculator.com/tools/grade-average-calculator"
               },
               {
-                "@type": "Thing", 
+                "@type": "Thing",
                 "name": "Weighted Grading System",
                 "description": "Academic grading system where different components have different weights"
               }
@@ -482,16 +483,13 @@ Whether you use our calculators or do it manually, the important thing is that y
                 ))}
               </div>
             </div>
-            
+
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 sm:mb-8 font-inter">
               {article.title}
             </h1>
-            
+
             <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3 sm:gap-6 text-white/90 mb-6 sm:mb-8">
-              <div className="flex items-center gap-2">
-                <User className="h-4 w-4 sm:h-5 sm:w-5" />
-                <span className="font-medium text-sm sm:text-base">{article.author}</span>
-              </div>
+              <AuthorCard variant="compact" />
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4 sm:h-5 sm:w-5" />
                 <span className="text-sm sm:text-base">{article.date}</span>
@@ -506,37 +504,37 @@ Whether you use our calculators or do it manually, the important thing is that y
             <div className="flex flex-col sm:flex-row sm:items-center gap-3">
               <span className="text-white/80 text-sm font-medium">Share:</span>
               <div className="flex flex-wrap gap-2">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  onClick={() => handleShareClick('twitter')} 
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleShareClick('twitter')}
                   className="bg-white/10 border-white/30 text-white hover:bg-white/20 transition-colors text-xs sm:text-sm px-3 py-2"
                 >
                   <Twitter className="h-3 w-3 sm:h-4 sm:w-4" />
                   <span className="hidden sm:inline ml-1">Twitter</span>
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  onClick={() => handleShareClick('facebook')} 
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleShareClick('facebook')}
                   className="bg-white/10 border-white/30 text-white hover:bg-white/20 transition-colors text-xs sm:text-sm px-3 py-2"
                 >
                   <Facebook className="h-3 w-3 sm:h-4 sm:w-4" />
                   <span className="hidden sm:inline ml-1">Facebook</span>
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  onClick={() => handleShareClick('whatsapp')} 
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleShareClick('whatsapp')}
                   className="bg-white/10 border-white/30 text-white hover:bg-white/20 transition-colors text-xs sm:text-sm px-3 py-2"
                 >
                   <MessageCircle className="h-3 w-3 sm:h-4 sm:w-4" />
                   <span className="hidden sm:inline ml-1">WhatsApp</span>
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  onClick={() => handleShareClick()} 
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleShareClick()}
                   className="bg-white/10 border-white/30 text-white hover:bg-white/20 transition-colors text-xs sm:text-sm px-3 py-2"
                 >
                   {copied ? "Copied!" : (
@@ -548,6 +546,19 @@ Whether you use our calculators or do it manually, the important thing is that y
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Featured Image */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src="/images/blog-college-grades.png"
+              alt="College student computing grades with textbooks, laptop, and grade sheets on a desk"
+              className="w-full h-56 sm:h-72 md:h-96 object-cover"
+              width="1200"
+              height="630"
+            />
           </div>
         </div>
 
@@ -617,7 +628,10 @@ Whether you use our calculators or do it manually, the important thing is that y
           </Card>
 
           {/* Tools Call-to-Action */}
-          <Card className="mt-12 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 border-0 shadow-xl">
+          {/* Author Box */}
+          <AuthorCard variant="full" />
+
+          <Card className="mt-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 border-0 shadow-xl">
             <CardHeader className="text-center pb-6">
               <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 🚀 Try Our Grade Calculators
@@ -664,8 +678,8 @@ Whether you use our calculators or do it manually, the important thing is that y
                     <CardContent className="p-6">
                       <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{tool.name}</h3>
                       <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{tool.desc}</p>
-                      <Link 
-                        to={tool.href} 
+                      <Link
+                        to={tool.href}
                         className="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                       >
                         Try it now →

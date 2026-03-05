@@ -157,23 +157,78 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-academic-blue-light via-white to-academic-gray dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors">
       <ReadingProgressBar />
 
-      {/* Hero Section - Mobile First with top padding for fixed header */}
-      <section className="pt-32 pb-8 px-4 sm:pt-36 sm:pb-12 md:pt-40 md:pb-16">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-            {t('hero.title')}
-          </h1>
-          <h2 className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">
-            {t('hero.subtitle')}
-          </h2>
-          <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 max-w-3xl mx-auto mb-8 sm:mb-12 px-2">
-            {t('hero.description')}
-          </p>
+      {/* Hero Section - Two-column layout with illustration */}
+      <section className="pt-28 pb-6 px-4 sm:pt-32 sm:pb-10 md:pt-36 md:pb-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+            {/* Text Column */}
+            <div className="flex-1 text-center lg:text-left">
+              <span className="inline-block bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-5">
+                🎓 Free for All Filipino Students
+              </span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-5 leading-tight">
+                {t('hero.title')}
+              </h1>
+              <h2 className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">
+                {t('hero.subtitle')}
+              </h2>
+              <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto lg:mx-0 mb-7 px-1">
+                {t('hero.description')}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                <a href="#calculator" className="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3.5 rounded-xl font-semibold text-base transition-colors shadow-lg shadow-blue-200 dark:shadow-none">
+                  Calculate My GWA Free →
+                </a>
+                <a href="/blog" className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-500 dark:hover:border-blue-400 px-7 py-3.5 rounded-xl font-semibold text-base transition-colors">
+                  Read Guides
+                </a>
+              </div>
+            </div>
+            {/* Illustration Column */}
+            <div className="flex-1 max-w-sm lg:max-w-lg w-full">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/hero-illustration.png"
+                  alt="Filipino student using GWA calculator online with grade charts and academic tools"
+                  className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                  width="600"
+                  height="400"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Calculator Section - Mobile First with Lazy Loading */}
-      <section className="py-6 px-4 sm:py-8 md:py-12" id="calculator">
+      {/* Trust Stats Bar */}
+      <section className="py-6 px-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-y border-gray-100 dark:border-gray-700">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+            {[{
+              value: "50,000+",
+              label: "GWAs Calculated"
+            }, {
+              value: "6 Free",
+              label: "Academic Tools"
+            }, {
+              value: "100%",
+              label: "Free Forever"
+            }, {
+              value: "All PH",
+              label: "Universities Supported"
+            }].map((stat, i) => (
+              <div key={i} className="py-3">
+                <div className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-medium mt-0.5">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Calculator Section - with Lazy Loading */}
+      <section className="py-8 px-4 sm:py-10 md:py-14" id="calculator">
         <div className="max-w-7xl mx-auto">
           <Suspense fallback={<div className="flex items-center justify-center p-8">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-academic-blue" />
@@ -526,35 +581,48 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
-            <Link to="/blog/how-to-compute-gwa" className="group">
-              <Card className="h-full bg-white/80 dark:bg-gray-800/80 border-gray-200/50 dark:border-gray-700/50 hover:border-academic-blue dark:hover:border-blue-500 transition-all hover:shadow-lg">
-                <CardContent className="p-5">
-                  <span className="text-xs font-medium text-academic-blue dark:text-blue-400 bg-academic-blue/10 dark:bg-blue-900/20 px-2 py-1 rounded-full">Guide</span>
-                  <h3 className="font-bold text-gray-900 dark:text-white mt-3 mb-2 group-hover:text-academic-blue dark:group-hover:text-blue-400">How to Compute GWA: Step-by-Step Guide</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Learn the complete process of computing your General Weighted Average with examples and formulas.</p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link to="/blog/how-to-compute-grades-in-college" className="group">
-              <Card className="h-full bg-white/80 dark:bg-gray-800/80 border-gray-200/50 dark:border-gray-700/50 hover:border-academic-blue dark:hover:border-blue-500 transition-all hover:shadow-lg">
-                <CardContent className="p-5">
-                  <span className="text-xs font-medium text-academic-blue dark:text-blue-400 bg-academic-blue/10 dark:bg-blue-900/20 px-2 py-1 rounded-full">Tutorial</span>
-                  <h3 className="font-bold text-gray-900 dark:text-white mt-3 mb-2 group-hover:text-academic-blue dark:group-hover:text-blue-400">How to Compute Grades in College</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">A complete guide to understanding and computing your college grades in the Philippine education system.</p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link to="/blog/deans-list-requirements-philippines" className="group">
-              <Card className="h-full bg-white/80 dark:bg-gray-800/80 border-gray-200/50 dark:border-gray-700/50 hover:border-academic-blue dark:hover:border-blue-500 transition-all hover:shadow-lg">
-                <CardContent className="p-5">
-                  <span className="text-xs font-medium text-academic-blue dark:text-blue-400 bg-academic-blue/10 dark:bg-blue-900/20 px-2 py-1 rounded-full">Exclusive</span>
-                  <h3 className="font-bold text-gray-900 dark:text-white mt-3 mb-2 group-hover:text-academic-blue dark:group-hover:text-blue-400">Dean's List Requirements 2025</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Check the GWA requirements for Dean's List at UP, PUP, UST, DLSU, PLM, and other top universities.</p>
-                </CardContent>
-              </Card>
-            </Link>
+            {[{
+              slug: "how-to-compute-gwa",
+              label: "Guide",
+              image: "/images/blog-compute-gwa.png",
+              alt: "Notebook with GWA formula, calculator and graduation cap",
+              title: "How to Compute GWA: Step-by-Step Guide",
+              desc: "Learn the complete process of computing your General Weighted Average with examples and formulas."
+            }, {
+              slug: "how-to-compute-grades-in-college",
+              label: "Tutorial",
+              image: "/images/blog-college-grades.png",
+              alt: "College student with textbooks and grade sheets",
+              title: "How to Compute Grades in College",
+              desc: "A complete guide to understanding and computing your college grades in the Philippine education system."
+            }, {
+              slug: "deans-list-requirements-philippines",
+              label: "Exclusive",
+              image: "/images/blog-deans-list.png",
+              alt: "Dean's List honor board with graduation cap",
+              title: "Dean's List Requirements 2025",
+              desc: "Check the GWA requirements for Dean's List at UP, PUP, UST, DLSU, PLM, and other top universities."
+            }].map((post, i) => (
+              <Link key={i} to={`/blog/${post.slug}`} className="group">
+                <Card className="h-full bg-white/80 dark:bg-gray-800/80 border-gray-200/50 dark:border-gray-700/50 hover:border-academic-blue dark:hover:border-blue-500 transition-all hover:shadow-lg overflow-hidden">
+                  <div className="overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.alt}
+                      className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-500"
+                      width="400"
+                      height="144"
+                      loading="lazy"
+                    />
+                  </div>
+                  <CardContent className="p-5">
+                    <span className="text-xs font-medium text-academic-blue dark:text-blue-400 bg-academic-blue/10 dark:bg-blue-900/20 px-2 py-1 rounded-full">{post.label}</span>
+                    <h3 className="font-bold text-gray-900 dark:text-white mt-3 mb-2 group-hover:text-academic-blue dark:group-hover:text-blue-400">{post.title}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{post.desc}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
 
           <div className="text-center">

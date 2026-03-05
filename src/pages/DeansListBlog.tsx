@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { AuthorCard } from "@/components/AuthorCard";
 
 const DeansListBlog = () => {
     const { toast } = useToast();
@@ -370,10 +371,7 @@ Study smart, track your grades, and good luck this semester!
                         </h1>
 
                         <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-3 sm:gap-6 text-white/90 mb-6 sm:mb-8">
-                            <div className="flex items-center gap-2">
-                                <User className="h-4 w-4 sm:h-5 sm:w-5" />
-                                <span className="font-medium text-sm sm:text-base">{article.author}</span>
-                            </div>
+                            <AuthorCard variant="compact" />
                             <div className="flex items-center gap-2">
                                 <Calendar className="h-4 w-4 sm:h-5 sm:w-5" />
                                 <span className="text-sm sm:text-base">{article.date}</span>
@@ -430,6 +428,19 @@ Study smart, track your grades, and good luck this semester!
                                 </Button>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* Featured Image */}
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
+                    <div className="rounded-2xl overflow-hidden shadow-xl">
+                        <img
+                            src="/images/blog-deans-list.png"
+                            alt="Dean's List honor board with gold stars, graduation cap and certificate in a Philippine university setting"
+                            className="w-full h-56 sm:h-72 md:h-96 object-cover"
+                            width="1200"
+                            height="630"
+                        />
                     </div>
                 </div>
 
@@ -504,7 +515,10 @@ Study smart, track your grades, and good luck this semester!
                     </Card>
 
                     {/* Tools Call-to-Action */}
-                    <Card className="mt-12 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 border-0 shadow-xl">
+                    {/* Author Box */}
+                    <AuthorCard variant="full" />
+
+                    <Card className="mt-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 border-0 shadow-xl">
                         <CardHeader className="text-center pb-6">
                             <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                                 🚀 Check Your Honor Status
