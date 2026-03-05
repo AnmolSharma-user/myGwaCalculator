@@ -53,105 +53,74 @@ const Index = () => {
 
   return <>
     <Helmet>
-      <title>GWA Calculator - Calculate General Weighted Average Online | philippines</title>
+      <title>GWA Calculator - Calculate General Weighted Average Online | Philippines</title>
       <meta name="description" content="Calculate your General Weighted Average (GWA) for free with our accurate online tool. Perfect for Filipino students, supports all grading systems. Get instant results!" />
-      <meta name="keywords" content="GWA calculator, General Weighted Average calculator, grade calculator Philippines, academic performance tracker, student GPA calculator, free online calculator, main GWA tool" />
+      <meta name="keywords" content="GWA calculator, General Weighted Average calculator, grade calculator Philippines, academic performance tracker, student GPA calculator, free online calculator" />
       <link rel="canonical" href="https://mygwacalculator.com/" />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+      <meta name="author" content="Anmol Gautam" />
+      <meta name="geo.region" content="PH" />
+      <meta name="geo.country" content="Philippines" />
+
+      {/* Open Graph */}
       <meta property="og:title" content="Free GWA Calculator - Calculate General Weighted Average Online" />
-      <meta property="og:description" content="Calculate your General Weighted Average (GWA) for free with our accurate online tool. Perfect for Filipino students, supports all grading systems." />
+      <meta property="og:description" content="Calculate your General Weighted Average (GWA) for free. Perfect for Filipino students, supports all grading systems." />
       <meta property="og:url" content="https://mygwacalculator.com/" />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://mygwacalculator.com/android-chrome-512x512.png" />
+      <meta property="og:locale" content="en_PH" />
+      <meta property="og:site_name" content="mygwacalculator.com" />
       <link rel="alternate" hrefLang="en" href="https://mygwacalculator.com/" />
       <link rel="alternate" hrefLang="fil" href="https://mygwacalculator.com/?lng=fil" />
       <link rel="alternate" hrefLang="x-default" href="https://mygwacalculator.com/" />
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "@id": "https://mygwacalculator.com/#webpage",
-          "name": "GWA Calculator - Free Online Tool",
-          "description": "Calculate your General Weighted Average (GWA) easily with our free online tool",
-          "url": "https://mygwacalculator.com/",
-          "mainEntity": {
-            "@type": "SoftwareApplication",
-            "name": "GWA Calculator",
-            "applicationCategory": "EducationalApplication",
-            "operatingSystem": "Web Browser"
-          },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://mygwacalculator.com/"
-            }]
-          }
-        })}
-      </script>
-    </Helmet>
 
-    {/* HowTo Schema for Calculator Usage */}
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "HowTo",
-          "name": "How to Calculate GWA (General Weighted Average)",
-          "description": "Step-by-step guide to calculating your GWA using the weighted average formula.",
-          "image": "https://mygwacalculator.com/og-image.jpg",
-          "totalTime": "PT5M",
-          "step": [
-            {
-              "@type": "HowToStep",
-              "name": "Gather Grades and Units",
-              "text": "List down all your subjects for the semester/term along with their corresponding grades and number of units/credits.",
-              "image": "https://mygwacalculator.com/step1-grades.jpg",
-              "url": "https://mygwacalculator.com/#step1"
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Multiply Grade by Units",
-              "text": "For each subject, multiply the grade by the number of units. (e.g., Grade 1.5 x 3 units = 4.5)",
-              "image": "https://mygwacalculator.com/step2-multiply.jpg",
-              "url": "https://mygwacalculator.com/#step2"
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Get the Sum of Products",
-              "text": "Add up all the results from the previous step to get the total weighted points.",
-              "image": "https://mygwacalculator.com/step3-sum.jpg",
-              "url": "https://mygwacalculator.com/#step3"
-            },
-            {
-              "@type": "HowToStep",
-              "name": "Divide by Total Units",
-              "text": "Divide the total weighted points by the total number of units. The result is your GWA.",
-              "image": "https://mygwacalculator.com/step4-divide.jpg",
-              "url": "https://mygwacalculator.com/#step4"
-            }
-          ]
-        })}
-      </script>
-    </Helmet>
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Free GWA Calculator Philippines" />
+      <meta name="twitter:description" content="Calculate your GWA free. Built for Filipino students." />
+      <meta name="twitter:image" content="https://mygwacalculator.com/android-chrome-512x512.png" />
 
-    {/* Main Page FAQ Schema - Separate from tool pages */}
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "@id": "https://mygwacalculator.com/#main-faq",
-          "mainEntity": faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": faq.answer
-            }
-          }))
-        })}
-      </script>
+      {/* Schema: SoftwareApplication */}
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "GWA Calculator",
+        "description": "Free online General Weighted Average calculator for Filipino college students.",
+        "url": "https://mygwacalculator.com/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PHP", "availability": "https://schema.org/InStock" },
+        "author": { "@type": "Person", "name": "Anmol Gautam", "url": "https://mygwacalculator.com/about" },
+        "publisher": { "@type": "Organization", "name": "mygwacalculator.com", "url": "https://mygwacalculator.com", "logo": { "@type": "ImageObject", "url": "https://mygwacalculator.com/android-chrome-512x512.png" } },
+        "inLanguage": "en-PH",
+        "isAccessibleForFree": true
+      })}</script>
+
+      {/* Schema: HowTo */}
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Calculate GWA (General Weighted Average)",
+        "description": "Step-by-step guide to calculating your GWA using the weighted average formula.",
+        "totalTime": "PT5M",
+        "step": [
+          { "@type": "HowToStep", "name": "Gather Grades and Units", "text": "List all your subjects for the semester with their grades and number of units.", "url": "https://mygwacalculator.com/#step1" },
+          { "@type": "HowToStep", "name": "Multiply Grade by Units", "text": "For each subject, multiply the grade by the number of units (e.g., Grade 1.5 × 3 units = 4.5).", "url": "https://mygwacalculator.com/#step2" },
+          { "@type": "HowToStep", "name": "Sum All Products", "text": "Add up all the grade × units results.", "url": "https://mygwacalculator.com/#step3" },
+          { "@type": "HowToStep", "name": "Divide by Total Units", "text": "Divide the total weighted points by the total number of units. The result is your GWA.", "url": "https://mygwacalculator.com/#step4" }
+        ]
+      })}</script>
+
+      {/* Schema: FAQPage — exactly one FAQPage on this URL */}
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+        }))
+      })}</script>
     </Helmet>
 
     <div className="min-h-screen bg-gradient-to-br from-academic-blue-light via-white to-academic-gray dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors">

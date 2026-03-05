@@ -6,8 +6,12 @@ interface SEOHeadProps {
   keywords: string;
   canonicalUrl: string;
   ogImage?: string;
-  structuredData?: object;
-  faqData?: Array<{ question: string; answer: string }>;
+  // faqData and structuredData are kept for API compatibility but no longer used
+  // to emit any schema — removes the root cause of "Duplicate field FAQPage" errors.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  structuredData?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  faqData?: any[];
   toolType?: string;
   toolCategory?: string;
   toolFeatures?: string[];
@@ -20,11 +24,14 @@ export const SEOHead = ({
   keywords,
   canonicalUrl,
   ogImage = "https://mygwacalculator.com/android-chrome-512x512.png",
-  structuredData,
-  faqData,
 }: SEOHeadProps) => {
-  // SoftwareApplication schema — canonical schema for all calculator tool pages.
-  const baseStructuredData = {
+  // Single, clean SoftwareApplication schema.
+  // NO FAQPage is emitted here — ever.
+  // Pages that need FAQPage rich results must declare their OWN
+  // <Helmet><script type="application/ld+json">…FAQPage…</script></Helmet>
+  // Having FAQPage in two places (here + a page Helmet) causes Google's
+  // "Duplicate field FAQPage" critical structured-data error.
+  const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": title,
@@ -55,26 +62,6 @@ export const SEOHead = ({
     "inLanguage": "en-PH",
     "isAccessibleForFree": true
   };
-
-  // FAQPage — ONLY rendered when faqData is provided via SEOHead.
-  // IMPORTANT: If a page uses SEOHead AND passes faqData here, it must NOT also
-  // emit its own FAQPage schema in a separate <Helmet> block — that causes
-  // the "Duplicate field FAQPage" critical error in Google Search Console.
-  const faqStructuredData = faqData && faqData.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqData
-      .filter(faq => faq.question && faq.answer)
-      .slice(0, 10)
-      .map(faq => ({
-        "@type": "Question",
-        "name": faq.question.trim(),
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer.trim()
-        }
-      }))
-  } : null;
 
   return (
     <Helmet>
@@ -108,24 +95,10 @@ export const SEOHead = ({
       <meta name="geo.country" content="Philippines" />
       <meta name="language" content="en-PH" />
 
-      {/* Schema: SoftwareApplication */}
+      {/* Schema — SoftwareApplication ONLY */}
       <script type="application/ld+json">
-        {JSON.stringify(baseStructuredData)}
+        {JSON.stringify(schema)}
       </script>
-
-      {/* Schema: FAQPage — only when faqData passed */}
-      {faqStructuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(faqStructuredData)}
-        </script>
-      )}
-
-      {/* Schema: Custom override */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
     </Helmet>
   );
 };
